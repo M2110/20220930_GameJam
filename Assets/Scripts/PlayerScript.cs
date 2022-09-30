@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour
     private Grid grid;
     private float gridSize;
     private GameObject currentTrigger;
+    private Animator[] animators;
 
     [SerializeField] private float speed = 5f;
 
@@ -36,6 +37,7 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animators = GetComponentsInChildren<Animator>();
     }
 
     private void FixedUpdate()
@@ -43,6 +45,10 @@ public class PlayerScript : MonoBehaviour
         if (!isMoving && input.Player.Move.ReadValue<Vector2>() != Vector2.zero)
         {
             StartCoroutine(Movement(input.Player.Move.ReadValue<Vector2>()));
+        }
+        else if (!isMoving)
+        {
+            SetAnimation("OnStop");
         }
     }
 
@@ -72,6 +78,25 @@ public class PlayerScript : MonoBehaviour
     private IEnumerator Movement(Vector2 direction)
     {
         isMoving = true;
+        if (direction.x > 0)
+        {
+            SetAnimation("OnWalkRight");
+        }
+        else if (direction.x < 0)
+        {
+            SetAnimation("OnWalkLeft");
+        }
+        else
+        {
+            if (direction.y > 0)
+            {
+                SetAnimation("OnWalkUp");
+            }
+            else
+            {
+                SetAnimation("OnWalkDown");
+            }
+        }
         Vector2 target = rb.position + new Vector2((float) Math.Round(direction.x), (float) Math.Round(direction.y)) * gridSize;
         float distance;
         float lastDistance = Vector2.Distance(rb.position, target);
@@ -87,5 +112,13 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.position = target;
         isMoving = false;
+    }
+
+    private void SetAnimation(String command)
+    {
+        foreach (Animator animator in animators)
+        {
+            animator.SetTrigger(command);
+        }
     }
 }
