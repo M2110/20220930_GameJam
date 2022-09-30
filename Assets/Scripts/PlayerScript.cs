@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     private bool isMoving;
     private Grid grid;
     private float gridSize;
+    private GameObject currentTrigger;
 
     [SerializeField] private float speed = 5f;
 
@@ -33,16 +35,9 @@ public class PlayerScript : MonoBehaviour
         input.Player.Disable();
     }
 
-    // Start is called before the first frame update
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
     }
 
     private void FixedUpdate()
@@ -52,10 +47,28 @@ public class PlayerScript : MonoBehaviour
             StartCoroutine(Movement(input.Player.Move.ReadValue<Vector2>()));
         }
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        currentTrigger = other.gameObject;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        currentTrigger = null;
+    }
+
     private void OnActionPerformed(InputAction.CallbackContext callback)
     {
-        Debug.Log("Test");
+        if (currentTrigger != null)
+        {
+            switch (currentTrigger.tag)
+            {
+                default:
+                    Debug.LogWarning("Unknown trigger!");
+                    break;
+            }
+        }
     }
 
     private IEnumerator Movement(Vector2 direction)
