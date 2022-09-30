@@ -61,7 +61,7 @@ public class PlayerScript : MonoBehaviour
     private IEnumerator Movement(Vector2 direction)
     {
         isMoving = true;
-        Vector2 target = rb.position + new Vector2((float) Math.Round(direction.x), (float) Math.Round(direction.y));
+        Vector2 target = rb.position + new Vector2((float) Math.Round(direction.x), (float) Math.Round(direction.y)) * gridSize;
         float distance;
         float lastDistance = Vector2.Distance(rb.position, target);
         while ((distance = Vector2.Distance(rb.position, target)) > 0.05f)
