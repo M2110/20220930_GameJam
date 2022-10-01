@@ -55,6 +55,10 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("Outside"))
+        {
+            //Check for level completion
+        }
         currentTrigger = other.gameObject;
     }
 
