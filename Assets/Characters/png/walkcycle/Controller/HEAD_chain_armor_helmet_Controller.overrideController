@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HEAD_chain_armor_helmet_Controller
+  m_Controller: {fileID: 9100000, guid: cf0fd53d5df9f9848bfe382afa463733, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 8af9528696b758a40bf25bd3d3268010, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ce3160de08d7e9a49acced655fe75203, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1b20b52c857d29a439f263b629903d71, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 31f16edc753fd6249bdd64d74b58e94e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a1d0250b34701d6449e59de7b966bb8b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c61b241f46d244c48981d827ae4c8b60, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8e8be9dceafd78a40a3f4220a18ee545, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cc519e28fa43420459386d8e6c3bb39a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fffa74ba20d8789469625eba3ebfc51a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f51b03c8e0428a249bc713bacbbbe772, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bbd1dce86c0655546906cb4526222f9f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6ed67fc677eacc149abcc2df656d3278, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 65e6ea4b2ad51064eb8b85ceda721436, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 04f255255f377ce4594a5b0977dbcbdf, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 84535ef3c36618c42aefe02fd84ae15e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0e6c0cc863f276e42b16dc9ea7874833, type: 2}

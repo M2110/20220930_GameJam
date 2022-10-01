@@ -115,6 +115,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -95836,8 +95848,8 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_3857: -187934672
       PSP - Astonishia Story - Daria Village Tileset_3461: -644290104
       PSP - Astonishia Story - Daria Village Tileset_975: -618223410
-      PSP - Astonishia Story - Daria Village Tileset_2864: 1541272962
       PSP - Astonishia Story - Daria Village Tileset_3278: 476927430
+      PSP - Astonishia Story - Daria Village Tileset_2864: 1541272962
       PSP - Astonishia Story - Daria Village Tileset_382: -51246068
       PSP - Astonishia Story - Daria Village Tileset_2606: -1602109560
       PSP - Astonishia Story - Daria Village Tileset_3097: 1175228197
@@ -96054,38 +96066,39 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_670: -1102578200
       PSP - Astonishia Story - Daria Village Tileset_1833: -978189919
       PSP - Astonishia Story - Daria Village Tileset_1863: 696280937
-      PSP - Astonishia Story - Daria Village Tileset_401: 1394843634
-      PSP - Astonishia Story - Daria Village Tileset_2070: 2065371450
-      PSP - Astonishia Story - Daria Village Tileset_2417: -594332568
       PSP - Astonishia Story - Daria Village Tileset_2371: -2111305034
+      PSP - Astonishia Story - Daria Village Tileset_3495: 473516809
+      PSP - Astonishia Story - Daria Village Tileset_2070: 2065371450
+      PSP - Astonishia Story - Daria Village Tileset_401: 1394843634
+      PSP - Astonishia Story - Daria Village Tileset_2417: -594332568
       PSP - Astonishia Story - Daria Village Tileset_1114: -1732612163
       PSP - Astonishia Story - Daria Village Tileset_496: 8982215
-      PSP - Astonishia Story - Daria Village Tileset_3495: 473516809
       PSP - Astonishia Story - Daria Village Tileset_3251: 1642350914
       PSP - Astonishia Story - Daria Village Tileset_1533: -462910364
       PSP - Astonishia Story - Daria Village Tileset_1118: 253467798
       PSP - Astonishia Story - Daria Village Tileset_1217: 1561841979
+      PSP - Astonishia Story - Daria Village Tileset_3335: -1635413924
+      PSP - Astonishia Story - Daria Village Tileset_4362: -2007288221
       PSP - Astonishia Story - Daria Village Tileset_1454: -500124348
       PSP - Astonishia Story - Daria Village Tileset_2611: -1306456451
-      PSP - Astonishia Story - Daria Village Tileset_1467: 1681082998
-      PSP - Astonishia Story - Daria Village Tileset_3335: -1635413924
       PSP - Astonishia Story - Daria Village Tileset_1518: -192256936
-      PSP - Astonishia Story - Daria Village Tileset_1698: -1706448679
       PSP - Astonishia Story - Daria Village Tileset_627: 679953134
-      PSP - Astonishia Story - Daria Village Tileset_4362: -2007288221
+      PSP - Astonishia Story - Daria Village Tileset_1698: -1706448679
       PSP - Astonishia Story - Daria Village Tileset_2767: 500537208
       PSP - Astonishia Story - Daria Village Tileset_2853: -1449987621
       PSP - Astonishia Story - Daria Village Tileset_3571: 716695895
+      PSP - Astonishia Story - Daria Village Tileset_1467: 1681082998
       PSP - Astonishia Story - Daria Village Tileset_3474: -1272903797
       PSP - Astonishia Story - Daria Village Tileset_546: -2046489
       PSP - Astonishia Story - Daria Village Tileset_1190: 76727797
       PSP - Astonishia Story - Daria Village Tileset_1235: -646832528
-      PSP - Astonishia Story - Daria Village Tileset_2688: 1486566984
-      PSP - Astonishia Story - Daria Village Tileset_178: -1711405877
       PSP - Astonishia Story - Daria Village Tileset_3991: -1660442582
+      PSP - Astonishia Story - Daria Village Tileset_178: -1711405877
+      PSP - Astonishia Story - Daria Village Tileset_4356: -260356536
+      PSP - Astonishia Story - Daria Village Tileset_2688: 1486566984
       PSP - Astonishia Story - Daria Village Tileset_1297: -482099248
       PSP - Astonishia Story - Daria Village Tileset_2191: -562950454
-      PSP - Astonishia Story - Daria Village Tileset_4356: -260356536
+      PSP - Astonishia Story - Daria Village Tileset_4382: -2100906463
       PSP - Astonishia Story - Daria Village Tileset_3487: 1884796299
       PSP - Astonishia Story - Daria Village Tileset_3362: -986233032
       PSP - Astonishia Story - Daria Village Tileset_3488: 1419876312
@@ -96094,16 +96107,15 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_3225: 989932151
       PSP - Astonishia Story - Daria Village Tileset_1903: -390831222
       PSP - Astonishia Story - Daria Village Tileset_3861: 261978705
+      PSP - Astonishia Story - Daria Village Tileset_4084: 1906501254
       PSP - Astonishia Story - Daria Village Tileset_977: 1658151062
       PSP - Astonishia Story - Daria Village Tileset_1458: -518710404
-      PSP - Astonishia Story - Daria Village Tileset_4084: 1906501254
       PSP - Astonishia Story - Daria Village Tileset_3173: -821477208
-      PSP - Astonishia Story - Daria Village Tileset_3142: -382511216
       PSP - Astonishia Story - Daria Village Tileset_3952: 1791021022
       PSP - Astonishia Story - Daria Village Tileset_634: 2064663364
-      PSP - Astonishia Story - Daria Village Tileset_2047: 681780976
+      PSP - Astonishia Story - Daria Village Tileset_3142: -382511216
       PSP - Astonishia Story - Daria Village Tileset_3765: 974678366
-      PSP - Astonishia Story - Daria Village Tileset_4382: -2100906463
+      PSP - Astonishia Story - Daria Village Tileset_2047: 681780976
       PSP - Astonishia Story - Daria Village Tileset_1965: 221221122
       PSP - Astonishia Story - Daria Village Tileset_2310: -1589291250
       PSP - Astonishia Story - Daria Village Tileset_485: 371566577
@@ -96353,23 +96365,23 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_4066: -2120280631
       PSP - Astonishia Story - Daria Village Tileset_4119: -1798049103
       PSP - Astonishia Story - Daria Village Tileset_208: 189290977
-      PSP - Astonishia Story - Daria Village Tileset_437: -1249579155
+      PSP - Astonishia Story - Daria Village Tileset_4404: 2068674498
       PSP - Astonishia Story - Daria Village Tileset_806: 958232507
-      PSP - Astonishia Story - Daria Village Tileset_3320: 843291673
+      PSP - Astonishia Story - Daria Village Tileset_437: -1249579155
       PSP - Astonishia Story - Daria Village Tileset_880: 1914479399
       PSP - Astonishia Story - Daria Village Tileset_1110: -692329490
       PSP - Astonishia Story - Daria Village Tileset_1955: 937133275
-      PSP - Astonishia Story - Daria Village Tileset_4404: 2068674498
       PSP - Astonishia Story - Daria Village Tileset_131: -1644290242
-      PSP - Astonishia Story - Daria Village Tileset_42: 1346826236
-      PSP - Astonishia Story - Daria Village Tileset_3496: 663790554
       PSP - Astonishia Story - Daria Village Tileset_1738: -2033802307
+      PSP - Astonishia Story - Daria Village Tileset_3320: 843291673
       PSP - Astonishia Story - Daria Village Tileset_81: 185143543
       PSP - Astonishia Story - Daria Village Tileset_38: 1774595834
       PSP - Astonishia Story - Daria Village Tileset_2562: 1451602777
+      PSP - Astonishia Story - Daria Village Tileset_42: 1346826236
       PSP - Astonishia Story - Daria Village Tileset_3824: 1357541039
       PSP - Astonishia Story - Daria Village Tileset_936: -936105488
       PSP - Astonishia Story - Daria Village Tileset_3917: -1981748348
+      PSP - Astonishia Story - Daria Village Tileset_3496: 663790554
       PSP - Astonishia Story - Daria Village Tileset_2144: 2014965279
       PSP - Astonishia Story - Daria Village Tileset_3085: 1611602511
       PSP - Astonishia Story - Daria Village Tileset_2011: 376787964
@@ -96436,11 +96448,11 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_1814: 1194112939
       PSP - Astonishia Story - Daria Village Tileset_2783: 249282641
       PSP - Astonishia Story - Daria Village Tileset_2177: 1278095665
-      PSP - Astonishia Story - Daria Village Tileset_3505: 547765038
       PSP - Astonishia Story - Daria Village Tileset_3821: 675538766
+      PSP - Astonishia Story - Daria Village Tileset_3505: 547765038
+      PSP - Astonishia Story - Daria Village Tileset_4290: -1904999560
       PSP - Astonishia Story - Daria Village Tileset_2683: -1758015011
       PSP - Astonishia Story - Daria Village Tileset_3144: 1202202833
-      PSP - Astonishia Story - Daria Village Tileset_4290: -1904999560
       PSP - Astonishia Story - Daria Village Tileset_2146: -1263836518
       PSP - Astonishia Story - Daria Village Tileset_2808: 1561716634
       PSP - Astonishia Story - Daria Village Tileset_3402: 1946031629
@@ -96920,11 +96932,12 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_2253: 366341034
       PSP - Astonishia Story - Daria Village Tileset_3051: -379738731
       PSP - Astonishia Story - Daria Village Tileset_239: -617567432
+      PSP - Astonishia Story - Daria Village Tileset_4425: 1097297959
       PSP - Astonishia Story - Daria Village Tileset_594: 1347856397
-      PSP - Astonishia Story - Daria Village Tileset_1464: 17265600
       PSP - Astonishia Story - Daria Village Tileset_73: -25126400
-      PSP - Astonishia Story - Daria Village Tileset_1791: 1757868430
+      PSP - Astonishia Story - Daria Village Tileset_1464: 17265600
       PSP - Astonishia Story - Daria Village Tileset_1832: 1638281358
+      PSP - Astonishia Story - Daria Village Tileset_1791: 1757868430
       PSP - Astonishia Story - Daria Village Tileset_4086: -2024347473
       PSP - Astonishia Story - Daria Village Tileset_1198: 1265097754
       PSP - Astonishia Story - Daria Village Tileset_4082: 1027540712
@@ -96937,7 +96950,6 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_4341: -229755398
       PSP - Astonishia Story - Daria Village Tileset_3451: -96360404
       PSP - Astonishia Story - Daria Village Tileset_4474: -9452056
-      PSP - Astonishia Story - Daria Village Tileset_4425: 1097297959
       PSP - Astonishia Story - Daria Village Tileset_999: 993485493
       PSP - Astonishia Story - Daria Village Tileset_1869: 1425890711
       PSP - Astonishia Story - Daria Village Tileset_3291: 1647579734
@@ -96946,10 +96958,10 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_303: -419427625
       PSP - Astonishia Story - Daria Village Tileset_2569: -1138046153
       PSP - Astonishia Story - Daria Village Tileset_2402: -1664485150
+      PSP - Astonishia Story - Daria Village Tileset_3750: 742032455
       PSP - Astonishia Story - Daria Village Tileset_261: 1088514077
       PSP - Astonishia Story - Daria Village Tileset_2960: -1183433115
       PSP - Astonishia Story - Daria Village Tileset_997: -1820967333
-      PSP - Astonishia Story - Daria Village Tileset_3750: 742032455
       PSP - Astonishia Story - Daria Village Tileset_3419: -1809337283
       PSP - Astonishia Story - Daria Village Tileset_3740: -1648816714
       PSP - Astonishia Story - Daria Village Tileset_4212: 882131604
@@ -96967,26 +96979,26 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_1922: -305280696
       PSP - Astonishia Story - Daria Village Tileset_832: 1957773765
       PSP - Astonishia Story - Daria Village Tileset_1027: 397487773
+      PSP - Astonishia Story - Daria Village Tileset_2647: 1430627466
       PSP - Astonishia Story - Daria Village Tileset_1797: -1724429448
       PSP - Astonishia Story - Daria Village Tileset_3724: -438228155
-      PSP - Astonishia Story - Daria Village Tileset_2647: 1430627466
       PSP - Astonishia Story - Daria Village Tileset_680: 115415797
       PSP - Astonishia Story - Daria Village Tileset_733: -2100266727
       PSP - Astonishia Story - Daria Village Tileset_3310: -1049771213
       PSP - Astonishia Story - Daria Village Tileset_1298: 1444929796
       PSP - Astonishia Story - Daria Village Tileset_1485: 713182169
-      PSP - Astonishia Story - Daria Village Tileset_937: 2128631084
-      PSP - Astonishia Story - Daria Village Tileset_1597: 841518887
-      PSP - Astonishia Story - Daria Village Tileset_2264: -629737917
-      PSP - Astonishia Story - Daria Village Tileset_2384: -338843050
-      PSP - Astonishia Story - Daria Village Tileset_1766: 2065097248
       PSP - Astonishia Story - Daria Village Tileset_1721: -715654876
-      PSP - Astonishia Story - Daria Village Tileset_4444: 682379330
+      PSP - Astonishia Story - Daria Village Tileset_937: 2128631084
+      PSP - Astonishia Story - Daria Village Tileset_2264: -629737917
+      PSP - Astonishia Story - Daria Village Tileset_1597: 841518887
+      PSP - Astonishia Story - Daria Village Tileset_1766: 2065097248
+      PSP - Astonishia Story - Daria Village Tileset_3978: -1559034687
+      PSP - Astonishia Story - Daria Village Tileset_2384: -338843050
       PSP - Astonishia Story - Daria Village Tileset_837: -1060936394
       PSP - Astonishia Story - Daria Village Tileset_1162: 1767117611
       PSP - Astonishia Story - Daria Village Tileset_1442: 727017680
       PSP - Astonishia Story - Daria Village Tileset_2373: -216979144
-      PSP - Astonishia Story - Daria Village Tileset_3978: -1559034687
+      PSP - Astonishia Story - Daria Village Tileset_4444: 682379330
       PSP - Astonishia Story - Daria Village Tileset_2031: -1313062530
       PSP - Astonishia Story - Daria Village Tileset_2653: -133871406
       PSP - Astonishia Story - Daria Village Tileset_152: -36867267
@@ -97001,10 +97013,10 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_381: 674128636
       PSP - Astonishia Story - Daria Village Tileset_932: 466775656
       PSP - Astonishia Story - Daria Village Tileset_1478: -2055488970
-      PSP - Astonishia Story - Daria Village Tileset_395: -714686126
-      PSP - Astonishia Story - Daria Village Tileset_2132: 1745194205
-      PSP - Astonishia Story - Daria Village Tileset_391: -522263926
       PSP - Astonishia Story - Daria Village Tileset_2206: -1656763513
+      PSP - Astonishia Story - Daria Village Tileset_395: -714686126
+      PSP - Astonishia Story - Daria Village Tileset_391: -522263926
+      PSP - Astonishia Story - Daria Village Tileset_2132: 1745194205
       PSP - Astonishia Story - Daria Village Tileset_4538: 1866983626
       PSP - Astonishia Story - Daria Village Tileset_144: -1385866487
       PSP - Astonishia Story - Daria Village Tileset_2756: 2145144705
@@ -97017,33 +97029,33 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_2537: 1910485097
       PSP - Astonishia Story - Daria Village Tileset_265: 90635471
       PSP - Astonishia Story - Daria Village Tileset_229: 1426568706
-      PSP - Astonishia Story - Daria Village Tileset_2664: -38244901
+      PSP - Astonishia Story - Daria Village Tileset_3433: 40025543
       PSP - Astonishia Story - Daria Village Tileset_2414: -1656468884
       PSP - Astonishia Story - Daria Village Tileset_2586: 883644207
-      PSP - Astonishia Story - Daria Village Tileset_3433: 40025543
       PSP - Astonishia Story - Daria Village Tileset_643: 369947690
       PSP - Astonishia Story - Daria Village Tileset_713: 8822905
       PSP - Astonishia Story - Daria Village Tileset_1177: -1371302556
-      PSP - Astonishia Story - Daria Village Tileset_3809: -511024222
+      PSP - Astonishia Story - Daria Village Tileset_2664: -38244901
       PSP - Astonishia Story - Daria Village Tileset_3889: -21124676
       PSP - Astonishia Story - Daria Village Tileset_467: -2070324578
       PSP - Astonishia Story - Daria Village Tileset_3687: -1608640753
       PSP - Astonishia Story - Daria Village Tileset_4471: 1318037264
+      PSP - Astonishia Story - Daria Village Tileset_3809: -511024222
       PSP - Astonishia Story - Daria Village Tileset_1841: -1163005011
       PSP - Astonishia Story - Daria Village Tileset_1199: -991397105
       PSP - Astonishia Story - Daria Village Tileset_768: -1049583740
-      PSP - Astonishia Story - Daria Village Tileset_648: 1694718812
-      PSP - Astonishia Story - Daria Village Tileset_3891: -1722447449
       PSP - Astonishia Story - Daria Village Tileset_2390: -1451464496
+      PSP - Astonishia Story - Daria Village Tileset_648: 1694718812
       PSP - Astonishia Story - Daria Village Tileset_3484: 1073430817
+      PSP - Astonishia Story - Daria Village Tileset_3891: -1722447449
       PSP - Astonishia Story - Daria Village Tileset_1703: -629836270
       PSP - Astonishia Story - Daria Village Tileset_2174: -1177812534
       PSP - Astonishia Story - Daria Village Tileset_3523: 1527555474
       PSP - Astonishia Story - Daria Village Tileset_4527: 1699248411
       PSP - Astonishia Story - Daria Village Tileset_603: 1146834837
       PSP - Astonishia Story - Daria Village Tileset_63: 306145121
-      PSP - Astonishia Story - Daria Village Tileset_2571: -1488658386
       PSP - Astonishia Story - Daria Village Tileset_4274: 230850320
+      PSP - Astonishia Story - Daria Village Tileset_2571: -1488658386
       PSP - Astonishia Story - Daria Village Tileset_4205: 311392387
       PSP - Astonishia Story - Daria Village Tileset_2366: -954769219
       PSP - Astonishia Story - Daria Village Tileset_2599: -285949563
@@ -97054,10 +97066,10 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_1600: 287940190
       PSP - Astonishia Story - Daria Village Tileset_2993: -1933845294
       PSP - Astonishia Story - Daria Village Tileset_978: -1294069888
-      PSP - Astonishia Story - Daria Village Tileset_1208: 421465291
       PSP - Astonishia Story - Daria Village Tileset_1371: -1651977266
-      PSP - Astonishia Story - Daria Village Tileset_4132: 31137172
       PSP - Astonishia Story - Daria Village Tileset_1694: -800584342
+      PSP - Astonishia Story - Daria Village Tileset_1208: 421465291
+      PSP - Astonishia Story - Daria Village Tileset_4132: 31137172
       PSP - Astonishia Story - Daria Village Tileset_633: -1558590207
       PSP - Astonishia Story - Daria Village Tileset_3812: 1018888360
       PSP - Astonishia Story - Daria Village Tileset_203: -1957282607
@@ -97082,8 +97094,8 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_3974: 409345236
       PSP - Astonishia Story - Daria Village Tileset_205: 1701011319
       PSP - Astonishia Story - Daria Village Tileset_476: -1015388201
-      PSP - Astonishia Story - Daria Village Tileset_2423: -1993310209
       PSP - Astonishia Story - Daria Village Tileset_3979: -1716600850
+      PSP - Astonishia Story - Daria Village Tileset_2423: -1993310209
       PSP - Astonishia Story - Daria Village Tileset_1680: 845677418
       PSP - Astonishia Story - Daria Village Tileset_2410: 2013020665
       PSP - Astonishia Story - Daria Village Tileset_2081: 809014032
@@ -97093,9 +97105,9 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_110: 852831582
       PSP - Astonishia Story - Daria Village Tileset_1652: -938121215
       PSP - Astonishia Story - Daria Village Tileset_931: 907157627
+      PSP - Astonishia Story - Daria Village Tileset_4431: 971383920
       PSP - Astonishia Story - Daria Village Tileset_1774: 64878164
       PSP - Astonishia Story - Daria Village Tileset_928: 1253611589
-      PSP - Astonishia Story - Daria Village Tileset_4431: 971383920
       PSP - Astonishia Story - Daria Village Tileset_102: 969746562
       PSP - Astonishia Story - Daria Village Tileset_172: -325861161
       PSP - Astonishia Story - Daria Village Tileset_19: 1124401346
@@ -98118,10 +98130,10 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_1244: 968119882
       PSP - Astonishia Story - Daria Village Tileset_2372: 386003430
       PSP - Astonishia Story - Daria Village Tileset_2957: -959018467
-      PSP - Astonishia Story - Daria Village Tileset_2983: 1246196680
+      PSP - Astonishia Story - Daria Village Tileset_3148: -1299658186
       PSP - Astonishia Story - Daria Village Tileset_1648: 674974068
       PSP - Astonishia Story - Daria Village Tileset_842: -585658532
-      PSP - Astonishia Story - Daria Village Tileset_3148: -1299658186
+      PSP - Astonishia Story - Daria Village Tileset_4308: 1129476216
       PSP - Astonishia Story - Daria Village Tileset_104: -1495168363
       PSP - Astonishia Story - Daria Village Tileset_1975: 1450297936
       PSP - Astonishia Story - Daria Village Tileset_3059: -204489967
@@ -98138,37 +98150,34 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_1611: -521480164
       PSP - Astonishia Story - Daria Village Tileset_794: 1679784822
       PSP - Astonishia Story - Daria Village Tileset_2896: 1093678515
-      PSP - Astonishia Story - Daria Village Tileset_1165: -921841825
+      PSP - Astonishia Story - Daria Village Tileset_2620: -484658073
       PSP - Astonishia Story - Daria Village Tileset_4214: -2077697928
       PSP - Astonishia Story - Daria Village Tileset_1654: -888762090
-      PSP - Astonishia Story - Daria Village Tileset_2620: -484658073
+      PSP - Astonishia Story - Daria Village Tileset_1165: -921841825
+      PSP - Astonishia Story - Daria Village Tileset_4239: -1847402756
       PSP - Astonishia Story - Daria Village Tileset_1361: -711662699
-      PSP - Astonishia Story - Daria Village Tileset_4308: 1129476216
       PSP - Astonishia Story - Daria Village Tileset_298: -269635274
       PSP - Astonishia Story - Daria Village Tileset_908: 2117834626
       PSP - Astonishia Story - Daria Village Tileset_3525: 912134238
       PSP - Astonishia Story - Daria Village Tileset_3723: -2016178503
       PSP - Astonishia Story - Daria Village Tileset_1377: -167289096
       PSP - Astonishia Story - Daria Village Tileset_1370: -1746545663
-      PSP - Astonishia Story - Daria Village Tileset_3863: -180026832
-      PSP - Astonishia Story - Daria Village Tileset_2510: -121949627
       PSP - Astonishia Story - Daria Village Tileset_4041: -1013405307
+      PSP - Astonishia Story - Daria Village Tileset_2510: -121949627
       PSP - Astonishia Story - Daria Village Tileset_252: 1940081343
-      PSP - Astonishia Story - Daria Village Tileset_4072: 1820883173
-      PSP - Astonishia Story - Daria Village Tileset_4239: -1847402756
       PSP - Astonishia Story - Daria Village Tileset_4133: 1381913141
       PSP - Astonishia Story - Daria Village Tileset_2053: -919927505
+      PSP - Astonishia Story - Daria Village Tileset_3863: -180026832
       PSP - Astonishia Story - Daria Village Tileset_384: 1722173092
       PSP - Astonishia Story - Daria Village Tileset_2996: -1967749845
-      PSP - Astonishia Story - Daria Village Tileset_4152: 664175805
+      PSP - Astonishia Story - Daria Village Tileset_2983: 1246196680
       PSP - Astonishia Story - Daria Village Tileset_1212: 327771179
       PSP - Astonishia Story - Daria Village Tileset_1357: -598253499
       PSP - Astonishia Story - Daria Village Tileset_4532: 1926730365
       PSP - Astonishia Story - Daria Village Tileset_1016: 1098303757
-      PSP - Astonishia Story - Daria Village Tileset_2257: -903740864
       PSP - Astonishia Story - Daria Village Tileset_4022: 1527023368
       PSP - Astonishia Story - Daria Village Tileset_1921: -801842891
-      PSP - Astonishia Story - Daria Village Tileset_2718: -2097261922
+      PSP - Astonishia Story - Daria Village Tileset_2257: -903740864
       PSP - Astonishia Story - Daria Village Tileset_4294: 43824139
       PSP - Astonishia Story - Daria Village Tileset_187: -1457534198
       PSP - Astonishia Story - Daria Village Tileset_737: 1883625550
@@ -98186,17 +98195,20 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_3367: -517591249
       PSP - Astonishia Story - Daria Village Tileset_2573: -99549593
       PSP - Astonishia Story - Daria Village Tileset_87: -1332117047
-      PSP - Astonishia Story - Daria Village Tileset_2127: 785609254
+      PSP - Astonishia Story - Daria Village Tileset_4430: -1929813488
       PSP - Astonishia Story - Daria Village Tileset_4388: 1764290634
+      PSP - Astonishia Story - Daria Village Tileset_2718: -2097261922
+      PSP - Astonishia Story - Daria Village Tileset_4072: 1820883173
       PSP - Astonishia Story - Daria Village Tileset_636: -527138851
-      PSP - Astonishia Story - Daria Village Tileset_2777: 1348315037
+      PSP - Astonishia Story - Daria Village Tileset_2127: 785609254
       PSP - Astonishia Story - Daria Village Tileset_1032: 2293463
       PSP - Astonishia Story - Daria Village Tileset_1383: -186294952
       PSP - Astonishia Story - Daria Village Tileset_3755: 1752301584
       PSP - Astonishia Story - Daria Village Tileset_3935: -1224745519
       PSP - Astonishia Story - Daria Village Tileset_804: 562745512
       PSP - Astonishia Story - Daria Village Tileset_4310: -1706180267
-      PSP - Astonishia Story - Daria Village Tileset_4430: -1929813488
+      PSP - Astonishia Story - Daria Village Tileset_2777: 1348315037
+      PSP - Astonishia Story - Daria Village Tileset_4152: 664175805
       PSP - Astonishia Story - Daria Village Tileset_949: 696968801
       PSP - Astonishia Story - Daria Village Tileset_1872: 745048937
       PSP - Astonishia Story - Daria Village Tileset_3284: -2000660446
@@ -98230,8 +98242,8 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_3215: -324924112
       PSP - Astonishia Story - Daria Village Tileset_3091: 1440255384
       PSP - Astonishia Story - Daria Village Tileset_674: -1050953982
-      PSP - Astonishia Story - Daria Village Tileset_2516: -1798306039
       PSP - Astonishia Story - Daria Village Tileset_2590: -347716068
+      PSP - Astonishia Story - Daria Village Tileset_2516: -1798306039
       PSP - Astonishia Story - Daria Village Tileset_3333: -2117503999
       PSP - Astonishia Story - Daria Village Tileset_2353: 1915211194
       PSP - Astonishia Story - Daria Village Tileset_1277: 756813829
@@ -98247,28 +98259,28 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_2099: -1757853786
       PSP - Astonishia Story - Daria Village Tileset_3841: 253141478
       PSP - Astonishia Story - Daria Village Tileset_2577: -557334407
-      PSP - Astonishia Story - Daria Village Tileset_3426: -1540398729
       PSP - Astonishia Story - Daria Village Tileset_3868: 958716853
+      PSP - Astonishia Story - Daria Village Tileset_3426: -1540398729
       PSP - Astonishia Story - Daria Village Tileset_905: -2083917911
       PSP - Astonishia Story - Daria Village Tileset_2148: 519771893
       PSP - Astonishia Story - Daria Village Tileset_4195: 358712335
       PSP - Astonishia Story - Daria Village Tileset_2950: 1803687174
       PSP - Astonishia Story - Daria Village Tileset_2406: -1273610560
-      PSP - Astonishia Story - Daria Village Tileset_1089: 1442248045
       PSP - Astonishia Story - Daria Village Tileset_2725: -24202810
+      PSP - Astonishia Story - Daria Village Tileset_1089: 1442248045
       PSP - Astonishia Story - Daria Village Tileset_3955: 472300337
       PSP - Astonishia Story - Daria Village Tileset_4277: 1119679280
       PSP - Astonishia Story - Daria Village Tileset_2482: 1300061666
       PSP - Astonishia Story - Daria Village Tileset_601: 2069481926
-      PSP - Astonishia Story - Daria Village Tileset_1520: -860393767
+      PSP - Astonishia Story - Daria Village Tileset_3670: 251563056
       PSP - Astonishia Story - Daria Village Tileset_2121: -1398600812
       PSP - Astonishia Story - Daria Village Tileset_1049: -1481027486
       PSP - Astonishia Story - Daria Village Tileset_1038: -506306811
-      PSP - Astonishia Story - Daria Village Tileset_2103: 1851748945
       PSP - Astonishia Story - Daria Village Tileset_2249: 445296152
+      PSP - Astonishia Story - Daria Village Tileset_1520: -860393767
       PSP - Astonishia Story - Daria Village Tileset_1310: -846017472
       PSP - Astonishia Story - Daria Village Tileset_3627: -1237361289
-      PSP - Astonishia Story - Daria Village Tileset_3670: 251563056
+      PSP - Astonishia Story - Daria Village Tileset_4027: 1482972028
       PSP - Astonishia Story - Daria Village Tileset_2629: 2013174891
       PSP - Astonishia Story - Daria Village Tileset_728: -306402489
       PSP - Astonishia Story - Daria Village Tileset_3396: -1576737637
@@ -98276,15 +98288,15 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_1525: 532020395
       PSP - Astonishia Story - Daria Village Tileset_2742: -576478018
       PSP - Astonishia Story - Daria Village Tileset_322: -1599025469
-      PSP - Astonishia Story - Daria Village Tileset_3943: -1154654003
-      PSP - Astonishia Story - Daria Village Tileset_4027: 1482972028
+      PSP - Astonishia Story - Daria Village Tileset_2103: 1851748945
       PSP - Astonishia Story - Daria Village Tileset_1992: -510329149
       PSP - Astonishia Story - Daria Village Tileset_1997: 923839150
       PSP - Astonishia Story - Daria Village Tileset_3588: -518571274
       PSP - Astonishia Story - Daria Village Tileset_642: -1459571599
-      PSP - Astonishia Story - Daria Village Tileset_1044: -995210137
-      PSP - Astonishia Story - Daria Village Tileset_84: 1031409817
       PSP - Astonishia Story - Daria Village Tileset_1121: -1049094727
+      PSP - Astonishia Story - Daria Village Tileset_84: 1031409817
+      PSP - Astonishia Story - Daria Village Tileset_1044: -995210137
+      PSP - Astonishia Story - Daria Village Tileset_3943: -1154654003
       PSP - Astonishia Story - Daria Village Tileset_3664: -37520717
       PSP - Astonishia Story - Daria Village Tileset_1795: 1812123475
       PSP - Astonishia Story - Daria Village Tileset_1316: -1753377838
@@ -98321,22 +98333,22 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_96: -2041503080
       PSP - Astonishia Story - Daria Village Tileset_468: -1003926077
       PSP - Astonishia Story - Daria Village Tileset_2770: 1367469826
-      PSP - Astonishia Story - Daria Village Tileset_2575: 1958969669
-      PSP - Astonishia Story - Daria Village Tileset_3183: -2108994158
-      PSP - Astonishia Story - Daria Village Tileset_1930: 810215034
       PSP - Astonishia Story - Daria Village Tileset_3146: -228467247
+      PSP - Astonishia Story - Daria Village Tileset_2575: 1958969669
+      PSP - Astonishia Story - Daria Village Tileset_1930: 810215034
+      PSP - Astonishia Story - Daria Village Tileset_3183: -2108994158
       PSP - Astonishia Story - Daria Village Tileset_3330: -1227945294
       PSP - Astonishia Story - Daria Village Tileset_787: -1668316013
-      PSP - Astonishia Story - Daria Village Tileset_2524: 415760507
       PSP - Astonishia Story - Daria Village Tileset_2487: 1792352870
-      PSP - Astonishia Story - Daria Village Tileset_394: -1762400199
       PSP - Astonishia Story - Daria Village Tileset_3849: -281785799
-      PSP - Astonishia Story - Daria Village Tileset_3574: 723111892
+      PSP - Astonishia Story - Daria Village Tileset_2524: 415760507
+      PSP - Astonishia Story - Daria Village Tileset_394: -1762400199
       PSP - Astonishia Story - Daria Village Tileset_3612: -59105606
       PSP - Astonishia Story - Daria Village Tileset_3515: -1799796785
       PSP - Astonishia Story - Daria Village Tileset_4475: -424402335
       PSP - Astonishia Story - Daria Village Tileset_1266: -350343933
       PSP - Astonishia Story - Daria Village Tileset_1684: -131338949
+      PSP - Astonishia Story - Daria Village Tileset_3574: 723111892
       PSP - Astonishia Story - Daria Village Tileset_1473: -590684574
       PSP - Astonishia Story - Daria Village Tileset_2074: -1446520331
       PSP - Astonishia Story - Daria Village Tileset_2098: -182934885
@@ -98348,15 +98360,14 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_3437: 886887467
       PSP - Astonishia Story - Daria Village Tileset_1730: -1357124526
       PSP - Astonishia Story - Daria Village Tileset_505: -1267022488
-      PSP - Astonishia Story - Daria Village Tileset_1437: -380480734
       PSP - Astonishia Story - Daria Village Tileset_2039: 208279319
-      PSP - Astonishia Story - Daria Village Tileset_1195: 279199392
-      PSP - Astonishia Story - Daria Village Tileset_1805: 1967634251
+      PSP - Astonishia Story - Daria Village Tileset_3436: 1422101527
       PSP - Astonishia Story - Daria Village Tileset_3039: -1133085664
-      PSP - Astonishia Story - Daria Village Tileset_3122: -814810951
+      PSP - Astonishia Story - Daria Village Tileset_1195: 279199392
+      PSP - Astonishia Story - Daria Village Tileset_1437: -380480734
       PSP - Astonishia Story - Daria Village Tileset_743: 476247109
       PSP - Astonishia Story - Daria Village Tileset_1157: -1350195406
-      PSP - Astonishia Story - Daria Village Tileset_4328: -339292371
+      PSP - Astonishia Story - Daria Village Tileset_1805: 1967634251
       PSP - Astonishia Story - Daria Village Tileset_1290: -1519047301
       PSP - Astonishia Story - Daria Village Tileset_553: -1628666449
       PSP - Astonishia Story - Daria Village Tileset_3228: -363587172
@@ -98366,7 +98377,8 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_364: -981157079
       PSP - Astonishia Story - Daria Village Tileset_3983: 323792020
       PSP - Astonishia Story - Daria Village Tileset_4110: -1564317252
-      PSP - Astonishia Story - Daria Village Tileset_3436: 1422101527
+      PSP - Astonishia Story - Daria Village Tileset_4328: -339292371
+      PSP - Astonishia Story - Daria Village Tileset_3122: -814810951
       PSP - Astonishia Story - Daria Village Tileset_14: 434652738
       PSP - Astonishia Story - Daria Village Tileset_1071: 543403591
       PSP - Astonishia Story - Daria Village Tileset_2949: 152307105
@@ -98382,28 +98394,28 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_1281: -1498454440
       PSP - Astonishia Story - Daria Village Tileset_1414: 510200926
       PSP - Astonishia Story - Daria Village Tileset_2485: 1638271423
+      PSP - Astonishia Story - Daria Village Tileset_3993: -1564510041
       PSP - Astonishia Story - Daria Village Tileset_2735: 734983808
       PSP - Astonishia Story - Daria Village Tileset_3216: 2009953526
-      PSP - Astonishia Story - Daria Village Tileset_2814: -577238227
       PSP - Astonishia Story - Daria Village Tileset_2771: 198733459
-      PSP - Astonishia Story - Daria Village Tileset_3993: -1564510041
       PSP - Astonishia Story - Daria Village Tileset_2138: 1147933432
       PSP - Astonishia Story - Daria Village Tileset_1534: -1834195344
       PSP - Astonishia Story - Daria Village Tileset_7: -1054175531
-      PSP - Astonishia Story - Daria Village Tileset_2936: 1748378427
       PSP - Astonishia Story - Daria Village Tileset_3301: -507341951
+      PSP - Astonishia Story - Daria Village Tileset_3741: -76299976
       PSP - Astonishia Story - Daria Village Tileset_4103: -1218805176
       PSP - Astonishia Story - Daria Village Tileset_100: -1791807469
       PSP - Astonishia Story - Daria Village Tileset_2784: -967292154
+      PSP - Astonishia Story - Daria Village Tileset_2936: 1748378427
       PSP - Astonishia Story - Daria Village Tileset_862: -1115664826
       PSP - Astonishia Story - Daria Village Tileset_3060: -894597446
       PSP - Astonishia Story - Daria Village Tileset_2737: 415283045
       PSP - Astonishia Story - Daria Village Tileset_393: 268607225
       PSP - Astonishia Story - Daria Village Tileset_3478: -863442304
-      PSP - Astonishia Story - Daria Village Tileset_3741: -76299976
-      PSP - Astonishia Story - Daria Village Tileset_402: -340841218
-      PSP - Astonishia Story - Daria Village Tileset_3360: 1604936608
       PSP - Astonishia Story - Daria Village Tileset_4179: 1796833223
+      PSP - Astonishia Story - Daria Village Tileset_402: -340841218
+      PSP - Astonishia Story - Daria Village Tileset_2814: -577238227
+      PSP - Astonishia Story - Daria Village Tileset_3360: 1604936608
       PSP - Astonishia Story - Daria Village Tileset_2251: -1785296032
       PSP - Astonishia Story - Daria Village Tileset_4526: 583179133
       PSP - Astonishia Story - Daria Village Tileset_3165: -1915864448
@@ -98419,6 +98431,7 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_1146: 2080101605
       PSP - Astonishia Story - Daria Village Tileset_2454: 1702248342
       PSP - Astonishia Story - Daria Village Tileset_3203: 2118732602
+      PSP - Astonishia Story - Daria Village Tileset_4389: 1395592761
       PSP - Astonishia Story - Daria Village Tileset_1628: 616012922
       PSP - Astonishia Story - Daria Village Tileset_2776: 642576595
       PSP - Astonishia Story - Daria Village Tileset_2057: -1391518747
@@ -98428,7 +98441,6 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_222: -1750045352
       PSP - Astonishia Story - Daria Village Tileset_1063: 285833808
       PSP - Astonishia Story - Daria Village Tileset_1471: 1909083631
-      PSP - Astonishia Story - Daria Village Tileset_4389: 1395592761
       PSP - Astonishia Story - Daria Village Tileset_2087: 934294485
       PSP - Astonishia Story - Daria Village Tileset_3240: 1713067624
       PSP - Astonishia Story - Daria Village Tileset_1735: -2014251262
@@ -98442,9 +98454,8 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_863: -1061623590
       PSP - Astonishia Story - Daria Village Tileset_3400: -1483019748
       PSP - Astonishia Story - Daria Village Tileset_589: 334669326
-      PSP - Astonishia Story - Daria Village Tileset_844: -1172874021
-      PSP - Astonishia Story - Daria Village Tileset_1294: -255287915
       PSP - Astonishia Story - Daria Village Tileset_2317: -2033167617
+      PSP - Astonishia Story - Daria Village Tileset_4403: 510833460
       PSP - Astonishia Story - Daria Village Tileset_250: -1894947265
       PSP - Astonishia Story - Daria Village Tileset_2033: 93585155
       PSP - Astonishia Story - Daria Village Tileset_2748: -1938345552
@@ -98455,21 +98466,22 @@ TextureImporter:
       PSP - Astonishia Story - Daria Village Tileset_1413: -1252534593
       PSP - Astonishia Story - Daria Village Tileset_1356: -1133073920
       PSP - Astonishia Story - Daria Village Tileset_2019: 1446018331
+      PSP - Astonishia Story - Daria Village Tileset_844: -1172874021
       PSP - Astonishia Story - Daria Village Tileset_3630: -1423351643
       PSP - Astonishia Story - Daria Village Tileset_2512: -1287787298
       PSP - Astonishia Story - Daria Village Tileset_1566: 702298432
       PSP - Astonishia Story - Daria Village Tileset_598: 989061884
-      PSP - Astonishia Story - Daria Village Tileset_4403: 510833460
+      PSP - Astonishia Story - Daria Village Tileset_4492: -1856252891
       PSP - Astonishia Story - Daria Village Tileset_352: -394203521
       PSP - Astonishia Story - Daria Village Tileset_586: 2062368652
       PSP - Astonishia Story - Daria Village Tileset_212: -1125452432
       PSP - Astonishia Story - Daria Village Tileset_1401: -523145988
-      PSP - Astonishia Story - Daria Village Tileset_4492: -1856252891
+      PSP - Astonishia Story - Daria Village Tileset_1294: -255287915
       PSP - Astonishia Story - Daria Village Tileset_2066: -278897204
-      PSP - Astonishia Story - Daria Village Tileset_2125: -494687443
       PSP - Astonishia Story - Daria Village Tileset_2080: -298745155
-      PSP - Astonishia Story - Daria Village Tileset_1909: 1579163499
+      PSP - Astonishia Story - Daria Village Tileset_2125: -494687443
       PSP - Astonishia Story - Daria Village Tileset_3954: 574446743
+      PSP - Astonishia Story - Daria Village Tileset_1909: 1579163499
       PSP - Astonishia Story - Daria Village Tileset_2880: 1074454019
       PSP - Astonishia Story - Daria Village Tileset_3783: 987906130
       PSP - Astonishia Story - Daria Village Tileset_3430: 1062594314
