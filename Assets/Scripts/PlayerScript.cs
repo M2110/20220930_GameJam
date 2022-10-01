@@ -9,29 +9,32 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rb;
     private bool isMoving, isColliding;
     private Grid grid;
-    private float gridSize;
+    private float gridSize = 1;
     private GameObject currentTrigger;
     private Animator[] animators;
-    private UIManager uiManager;
 
     [SerializeField] private float speed = 5f;
+    
+    public static event EventHandler<Door> DoorEntered;
+    public static event EventHandler<UIText> DisplayUIText;
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         input = new PlayerInput();
-        grid = FindObjectOfType<Grid>();
-        gridSize = grid.cellSize.x;
     }
 
     private void OnEnable()
     {
         input.Player.Action.performed += OnActionPerformed;
+        SceneManager.SceneLoaded += OnSceneLoaded;
         input.Player.Enable();
     }
 
     private void OnDisable()
     {
         input.Player.Action.performed -= OnActionPerformed;
+        SceneManager.SceneLoaded -= OnSceneLoaded;
         input.Player.Disable();
     }
 
@@ -39,7 +42,6 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animators = GetComponentsInChildren<Animator>();
-        uiManager = FindObjectOfType<UIManager>();
     }
 
     private void FixedUpdate()
@@ -64,6 +66,15 @@ public class PlayerScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         isColliding = true;
+    }
+    
+    private void OnSceneLoaded(object sender, EventArgs e)
+    {
+        grid = FindObjectOfType<Grid>();
+        if (grid is not null)
+        {
+            gridSize = grid.cellSize.x;
+        }
     }
 
     private void OnActionPerformed(InputAction.CallbackContext callback)
@@ -90,7 +101,7 @@ public class PlayerScript : MonoBehaviour
         switch (door)
         {
             case "Door_Level1_Tavern":
-                //Implement scene loading
+                DoorEntered.Invoke(this, new Door(door));
                 break;
             default:
                 Debug.LogWarning("Unknown door!");
@@ -102,7 +113,7 @@ public class PlayerScript : MonoBehaviour
         switch (sign)
         {
             case "Sign_Level1_Tavern":
-                uiManager.DisplayText("To the tavern.", 3);
+                DisplayUIText.Invoke(this, new UIText("To the tavern.", 3));
                 break;
             default:
                 Debug.LogWarning("Unknown sign!");
@@ -175,6 +186,41 @@ public class PlayerScript : MonoBehaviour
         {
             animator.SetTrigger(command);
             animator.speed = 0.667f * speed / gridSize;
+        }
+    }
+    
+    public class Door : EventArgs
+    {
+        private string doorName;
+        
+        public Door(string doorName)
+        {
+            this.doorName = doorName;
+        }
+        public string GetDoorName()
+        {
+            return doorName;
+        }
+    }
+    
+    public class UIText : EventArgs
+    {
+        private string displayText;
+        private int duration;
+
+        public UIText(string displayText, int duration)
+        {
+            this.displayText = displayText;
+            this.duration = duration;
+        }
+        public string GetDisplayText()
+        {
+            return displayText;
+        }
+
+        public int GetDuration()
+        {
+            return duration;
         }
     }
 }

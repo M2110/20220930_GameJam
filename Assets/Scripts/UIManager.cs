@@ -17,13 +17,27 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         ui = FindObjectOfType<Canvas>();
         text = ui.GetComponentInChildren<TextMeshProUGUI>();
         panel = ui.GetComponentInChildren<Image>();
     }
 
-    public void DisplayText(string displayText, int duration)
+    private void OnEnable()
     {
+        PlayerScript.DisplayUIText += DisplayText;
+    }
+
+    private void OnDisable()
+    {
+        PlayerScript.DisplayUIText -= DisplayText;
+    }
+
+    private void DisplayText(object sender, PlayerScript.UIText uiText)
+    {
+        string displayText = uiText.GetDisplayText();
+        int duration = uiText.GetDuration();
+        
         if (isDisplayingText)
         {
             string[] toQueue = new string[2];
