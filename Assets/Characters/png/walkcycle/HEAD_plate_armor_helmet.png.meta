@@ -115,6 +115,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -885,10 +897,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HEAD_plate_armor_helmet_7: 1302498869
+      HEAD_plate_armor_helmet_34: -1310586699
       HEAD_plate_armor_helmet_4: -95108978
       HEAD_plate_armor_helmet_3: -440139290
-      HEAD_plate_armor_helmet_21: -974415117
+      HEAD_plate_armor_helmet_7: 1302498869
       HEAD_plate_armor_helmet_5: 1801642114
       HEAD_plate_armor_helmet_11: -1966513617
       HEAD_plate_armor_helmet_35: 1505211316
@@ -920,7 +932,7 @@ TextureImporter:
       HEAD_plate_armor_helmet_12: -1443931924
       HEAD_plate_armor_helmet_25: 142914180
       HEAD_plate_armor_helmet_29: -827535951
-      HEAD_plate_armor_helmet_34: -1310586699
+      HEAD_plate_armor_helmet_21: -974415117
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
