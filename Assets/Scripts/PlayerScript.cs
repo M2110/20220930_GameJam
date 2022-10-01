@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     private float gridSize;
     private GameObject currentTrigger;
     private Animator[] animators;
+    private UIManager uiManager;
 
     [SerializeField] private float speed = 5f;
 
@@ -38,6 +39,7 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animators = GetComponentsInChildren<Animator>();
+        uiManager = FindObjectOfType<UIManager>();
     }
 
     private void FixedUpdate()
@@ -70,10 +72,26 @@ public class PlayerScript : MonoBehaviour
         {
             switch (currentTrigger.tag)
             {
+                case "Sign":
+                    OnReadSign(currentTrigger.name);
+                    break;
                 default:
                     Debug.LogWarning("Unknown trigger!");
                     break;
             }
+        }
+    }
+
+    private void OnReadSign(String sign)
+    {
+        switch (sign)
+        {
+            case "Trigger_Level1_Tavern":
+                uiManager.DisplayText("To the tavern.", 3);
+                break;
+            default:
+                Debug.LogWarning("Unknown sign!");
+                break;
         }
     }
 
@@ -117,7 +135,7 @@ public class PlayerScript : MonoBehaviour
             }
             rb.velocity = direction * speed;
             lastDistance = distance;
-            yield return new WaitForSeconds(1/60);
+            yield return new WaitForSeconds(1f / 60);
         }
         rb.velocity = Vector2.zero;
         if (isColliding)
