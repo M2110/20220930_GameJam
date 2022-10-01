@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -39,25 +38,17 @@ public class SceneManager : MonoBehaviour
     {
         PlayerScript.DoorEntered -= OnDoorTrigger;
     }
-
-    // Start is called before the first frame update
     void Start()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Level1_Outside");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnDoorTrigger(object sender, PlayerScript.Door door)
     {
-        StartCoroutine(LoadNewRoom(door.GetDoorName()));
+        StartCoroutine(LoadNewScene(door.GetDoorName()));
     }
 
-    IEnumerator LoadNewRoom(String door)
+    IEnumerator LoadNewScene(String door)
     {
         bool hasLoadedScene = false;
         switch (door)
