@@ -7,7 +7,7 @@ public class PlayerScript : MonoBehaviour
 {
     private PlayerInput input;
     private Rigidbody2D rb;
-    private bool isMoving;
+    private bool isMoving, isColliding;
     private Grid grid;
     private float gridSize;
     private GameObject currentTrigger;
@@ -59,6 +59,11 @@ public class PlayerScript : MonoBehaviour
         currentTrigger = null;
     }
 
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        isColliding = true;
+    }
+
     private void OnActionPerformed(InputAction.CallbackContext callback)
     {
         if (currentTrigger != null)
@@ -99,12 +104,14 @@ public class PlayerScript : MonoBehaviour
             direction.x = (float) Math.Round(direction.x);
             direction.y = 0;
         }
-        Vector2 target = rb.position + new Vector2((float) Math.Round(direction.x), (float) Math.Round(direction.y)) * gridSize;
+
+        Vector2 position = rb.position;
+        Vector2 target = position + new Vector2((float) Math.Round(direction.x), (float) Math.Round(direction.y)) * gridSize;
         float distance;
         float lastDistance = Vector2.Distance(rb.position, target);
         while ((distance = Vector2.Distance(rb.position, target)) > 0.05f)
         {
-            if (lastDistance < distance)
+            if (lastDistance < distance || isColliding)
             {
                 break;
             }
@@ -113,7 +120,15 @@ public class PlayerScript : MonoBehaviour
             yield return new WaitForSeconds(1/60);
         }
         rb.velocity = Vector2.zero;
-        rb.position = target;
+        if (isColliding)
+        {
+            rb.position = position;
+            isColliding = false;
+        }
+        else
+        {
+            rb.position = target;
+        }
         isMoving = false;
         if (input.Player.Move.ReadValue<Vector2>() == Vector2.zero)
         {
