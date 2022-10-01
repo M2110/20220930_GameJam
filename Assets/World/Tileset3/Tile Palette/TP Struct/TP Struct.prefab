@@ -991,7 +991,7 @@ GameObject:
   - component: {fileID: 6560853432054469197}
   - component: {fileID: 8411991532764568869}
   m_Layer: 0
-  m_Name: Struct
+  m_Name: TP Struct
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

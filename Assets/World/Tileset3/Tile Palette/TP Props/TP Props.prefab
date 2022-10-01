@@ -2211,7 +2211,7 @@ GameObject:
   - component: {fileID: 6259040650550093908}
   - component: {fileID: 5265816923664097584}
   m_Layer: 0
-  m_Name: Props
+  m_Name: TP Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
