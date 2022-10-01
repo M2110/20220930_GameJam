@@ -75,6 +75,9 @@ public class PlayerScript : MonoBehaviour
                 case "Sign":
                     OnReadSign(currentTrigger.name);
                     break;
+                case "Door":
+                    OnEnterDoor(currentTrigger.name);
+                    break;
                 default:
                     Debug.LogWarning("Unknown trigger!");
                     break;
@@ -82,11 +85,23 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    private void OnEnterDoor(String door)
+    {
+        switch (door)
+        {
+            case "Door_Level1_Tavern":
+                //Implement scene loading
+                break;
+            default:
+                Debug.LogWarning("Unknown door!");
+                break;
+        }
+    }
     private void OnReadSign(String sign)
     {
         switch (sign)
         {
-            case "Trigger_Level1_Tavern":
+            case "Sign_Level1_Tavern":
                 uiManager.DisplayText("To the tavern.", 3);
                 break;
             default:
