@@ -44,11 +44,8 @@ public class PlayerScript : MonoBehaviour
     {
         if (!isMoving && input.Player.Move.ReadValue<Vector2>() != Vector2.zero)
         {
+            isMoving = true;
             StartCoroutine(Movement(input.Player.Move.ReadValue<Vector2>()));
-        }
-        else if (!isMoving)
-        {
-            SetAnimation("OnStop");
         }
     }
 
@@ -77,7 +74,6 @@ public class PlayerScript : MonoBehaviour
 
     private IEnumerator Movement(Vector2 direction)
     {
-        isMoving = true;
         if (direction.x > 0)
         {
             SetAnimation("OnWalkRight");
@@ -97,6 +93,12 @@ public class PlayerScript : MonoBehaviour
                 SetAnimation("OnWalkDown");
             }
         }
+
+        if (Math.Abs(direction.x) > 0 && Math.Abs(direction.y) > 0)
+        {
+            direction.x = (float) Math.Round(direction.x);
+            direction.y = 0;
+        }
         Vector2 target = rb.position + new Vector2((float) Math.Round(direction.x), (float) Math.Round(direction.y)) * gridSize;
         float distance;
         float lastDistance = Vector2.Distance(rb.position, target);
@@ -107,11 +109,16 @@ public class PlayerScript : MonoBehaviour
                 break;
             }
             rb.velocity = direction * speed;
+            lastDistance = distance;
             yield return new WaitForSeconds(1/60);
         }
         rb.velocity = Vector2.zero;
         rb.position = target;
         isMoving = false;
+        if (input.Player.Move.ReadValue<Vector2>() == Vector2.zero)
+        {
+            SetAnimation("OnStop");
+        }
     }
 
     private void SetAnimation(String command)
@@ -119,6 +126,7 @@ public class PlayerScript : MonoBehaviour
         foreach (Animator animator in animators)
         {
             animator.SetTrigger(command);
+            animator.speed = 0.667f * speed / gridSize;
         }
     }
 }
