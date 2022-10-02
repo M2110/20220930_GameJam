@@ -14,9 +14,9 @@ public class UIManager : MonoBehaviour
     private Queue<object[]> queue = new Queue<object[]>();
     private bool isDisplayingText;
 
-    private GameObject uIObjectInventoryEmpty;
+    /*private GameObject uIObjectInventoryEmpty;
     private TextMeshProUGUI textObjectInventory;
-    private Image imageSlotObjectInventory;
+    private Image imageSlotObjectInventory;*/
 
     public static event EventHandler<Move> MovementLimitation;
 
@@ -29,9 +29,9 @@ public class UIManager : MonoBehaviour
         text = ui.GetComponentInChildren<TextMeshProUGUI>();
         panel = ui.GetComponentInChildren<Image>();
         
-        uIObjectInventoryEmpty = GameObject.Find("UIObjectInventory");
+        /*uIObjectInventoryEmpty = GameObject.Find("UIObjectInventory");
         textObjectInventory = uIObjectInventoryEmpty.GetComponentInChildren<TextMeshProUGUI>();
-        imageSlotObjectInventory = uIObjectInventoryEmpty.GetComponentInChildren<Image>(); 
+        imageSlotObjectInventory = uIObjectInventoryEmpty.GetComponentInChildren<Image>(); */
         
 
     }
@@ -39,13 +39,13 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         PlayerScript.DisplayUIText += DisplayText;
-        PlayerScript.DisplayObjectInventory += DisplayObjectInventory;
+        //PlayerScript.DisplayObjectInventory += DisplayObjectInventory;
     }
 
     private void OnDisable()
     {
         PlayerScript.DisplayUIText -= DisplayText;
-        PlayerScript.DisplayObjectInventory -= DisplayObjectInventory;
+        //PlayerScript.DisplayObjectInventory -= DisplayObjectInventory;
     }
 
     private void DisplayText(object sender, PlayerScript.UIText uiText)
@@ -155,11 +155,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void DisplayObjectInventory(object sender, PlayerScript.UIObjectInventory inventory)
+    /*private void DisplayObjectInventory(object sender, PlayerScript.UIObjectInventory inventory)
     {
         textObjectInventory.color = new Color(textObjectInventory.color.r, textObjectInventory.color.g, textObjectInventory.color.b,255);
         imageSlotObjectInventory.color = new Color(imageSlotObjectInventory.color.r, imageSlotObjectInventory.color.g,
             imageSlotObjectInventory.color.b, 255);
         imageSlotObjectInventory.sprite = inventory.GetSprite();
-    }
+    }*/
 }

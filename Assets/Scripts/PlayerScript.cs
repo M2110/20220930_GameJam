@@ -20,7 +20,7 @@ public class PlayerScript : MonoBehaviour
     
     public static event EventHandler<Door> DoorEntered;
     public static event EventHandler<UIText> DisplayUIText;
-    public static event EventHandler<UIObjectInventory> DisplayObjectInventory;
+    //public static event EventHandler<UIObjectInventory> DisplayObjectInventory;
 
     private void Awake()
     {
@@ -142,10 +142,10 @@ public class PlayerScript : MonoBehaviour
                     state.OnDoorEntered(currentTrigger.name);
                     break;
                 
-                case "Chest":
+                /*case "Chest":
                     DisplayObjectInventory.Invoke(this, new UIObjectInventory("test name",currentTrigger.GetComponentInChildren<Sprite>()));
                     break;    
-                
+                */
                 default:
                     Debug.LogWarning("Unknown trigger!");
                     break;
@@ -307,7 +307,7 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    public class UIObjectInventory : EventArgs
+    /*public class UIObjectInventory : EventArgs
     {
         private string name;
         private Sprite sprite;
@@ -323,6 +323,6 @@ public class PlayerScript : MonoBehaviour
         {
             return sprite;
         }
-    }
+    }*/
 
 }
