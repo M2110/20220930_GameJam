@@ -85,7 +85,7 @@ public class PlayerScript : MonoBehaviour
     
     private void OnTurnPlayer(object sender, SceneManager.PlayerDirection direction)
     {
-        SetAnimation("OnStop");
+        //SetAnimation("OnStop");
         switch (direction.GetDirection())
         {
             case 0:
