@@ -48,62 +48,19 @@ public class SceneManager : MonoBehaviour
     void OnDoorTrigger(object sender, PlayerScript.Door door)
     {
         player ??= (GameObject)sender;
-        StartCoroutine(LoadNewScene(door.GetDoorName()));
+        StartCoroutine(LoadNewScene(door.GetDoorName(), door.GetX(), door.GetY(), door.GetDirection()));
     }
 
-    IEnumerator LoadNewScene(String door)
+    IEnumerator LoadNewScene(string scene, int x, int y, int direction)
     {
-        bool hasLoadedScene = false;
-        switch (door)
+        UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
+        while (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != scene)
         {
-            case "Door_Level1_Tavern":
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Level1_Inside1");
-                while (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level1_Inside1")
-                {
-                    yield return null;
-                }
-                TurnPlayer.Invoke(this, new PlayerDirection(0));
-                player.transform.position = new Vector2(-5f, -2f);
-                hasLoadedScene = true;
-                break;
-            case "Door_Level1_Outside_Tavern":
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Level1_Outside");
-                while (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level1_Outside")
-                {
-                    yield return null;
-                }
-                TurnPlayer.Invoke(this, new PlayerDirection(2));
-                player.transform.position = new Vector2(36f, 4f);
-                hasLoadedScene = true;
-                break;
-            case "Door_Level1_Church":
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Level1_Inside2");
-                while (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level1_Inside2")
-                {
-                    yield return null;
-                }
-                TurnPlayer.Invoke(this, new PlayerDirection(0));
-                player.transform.position = new Vector2(0f, -2f);
-                hasLoadedScene = true;
-                break;
-            case "Door_Level1_Outside_Church":
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Level1_Outside");
-                while (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level1_Outside")
-                {
-                    yield return null;
-                }
-                TurnPlayer.Invoke(this, new PlayerDirection(2));
-                player.transform.position = new Vector2(-11f, 23f);
-                hasLoadedScene = true;
-                break;
-            default:
-                Debug.LogWarning($"No door with name {door} found.");
-                break;
+            yield return null;
         }
-        if (hasLoadedScene)
-        {
-            SceneLoaded.Invoke(this, EventArgs.Empty);
-        }
+        TurnPlayer.Invoke(this, new PlayerDirection(direction));
+        player.transform.position = new Vector2(x, y);
+        SceneLoaded.Invoke(this, EventArgs.Empty);
     }
 
     public class PlayerDirection : EventArgs

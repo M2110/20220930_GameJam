@@ -14,6 +14,8 @@ public class PlayerScript : MonoBehaviour
     private Animator[] animators;
     private bool isMovementLimited;
 
+    private ILevel1Interface state;
+
     [SerializeField] private float speed = 5f;
     
     public static event EventHandler<Door> DoorEntered;
@@ -46,6 +48,7 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animators = GetComponentsInChildren<Animator>();
+        ChangeState(new Level1StartingState());
     }
 
     private void FixedUpdate()
@@ -61,7 +64,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (other.CompareTag("Outside"))
         {
-            //Check for level completion
+            state.OnLevelChange(other.name);
         }
         currentTrigger = other.gameObject;
     }
@@ -87,7 +90,6 @@ public class PlayerScript : MonoBehaviour
     
     private void OnTurnPlayer(object sender, SceneManager.PlayerDirection direction)
     {
-        //SetAnimation("OnStop");
         switch (direction.GetDirection())
         {
             case 0:
@@ -113,6 +115,16 @@ public class PlayerScript : MonoBehaviour
         isMovementLimited = movement.GetMovementLimitation();
     }
 
+    public void ChangeState(ILevel1Interface newState)
+    {
+        if (state is not null)
+        {
+            state.OnExit();
+        }
+        state = newState;
+        state.OnEnter(this);
+    }
+
     private void OnActionPerformed(InputAction.CallbackContext callback)
     {
         if (currentTrigger != null)
@@ -123,10 +135,11 @@ public class PlayerScript : MonoBehaviour
                     OnReadSign(currentTrigger.name);
                     break;
                 case "Npc":
-                    OnTalkToNPC(currentTrigger.name);
+                    state.OnTalkToNPC(currentTrigger.name);
                     break;
                 case "Door":
-                    DoorEntered.Invoke(this, new Door(currentTrigger.name));
+                    state.OnDoorEntered(currentTrigger.name);
+                    //DoorEntered.Invoke(this, new Door(currentTrigger.name));
                     break;
                 default:
                     Debug.LogWarning("Unknown trigger!");
@@ -135,29 +148,27 @@ public class PlayerScript : MonoBehaviour
         }
     }
     
-    private void OnTalkToNPC(String npc)
+    public void OnReadSign(string name)
     {
-        switch (npc)
-        {
-            case "NPC_Level1_Tavern":
-                DisplayUIText.Invoke(this, new UIText("Welcome to the tavern.", 5, true));
-                break;
-            default:
-                Debug.LogWarning("Unknown npc!");
-                break;
-        }
-    }
-    private void OnReadSign(String sign)
-    {
-        switch (sign)
+        switch (name)
         {
             case "Sign_Level1_Tavern":
-                DisplayUIText.Invoke(this, new UIText("To the tavern.", 3));
+                DisplayMessage("To the tavern.", 3);
                 break;
             default:
                 Debug.LogWarning("Unknown sign!");
                 break;
         }
+    }
+
+    public void DisplayMessage(string text, int duration, bool isMovementLimited = false)
+    {
+        DisplayUIText.Invoke(this, new UIText(text, duration, isMovementLimited));
+    }
+
+    public void EnterDoor(string name, int x, int y, int direction)
+    {
+        DoorEntered.Invoke(this, new Door(name, x, y, direction));
     }
 
     private IEnumerator Movement(Vector2 direction)
@@ -231,14 +242,35 @@ public class PlayerScript : MonoBehaviour
     public class Door : EventArgs
     {
         private string doorName;
+        private int x;
+        private int y;
+        private int direction;
         
-        public Door(string doorName)
+        public Door(string doorName, int x, int y, int direction)
         {
             this.doorName = doorName;
+            this.x = x;
+            this.y = y;
+            this.direction = direction;
         }
         public string GetDoorName()
         {
             return doorName;
+        }
+
+        public int GetX()
+        {
+            return x;
+        }
+
+        public int GetY()
+        {
+            return y;
+        }
+
+        public int GetDirection()
+        {
+            return direction;
         }
     }
     
