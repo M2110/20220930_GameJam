@@ -30,6 +30,7 @@ public class PlayerScript : MonoBehaviour
     private void OnEnable()
     {
         input.Player.Action.performed += OnActionPerformed;
+        input.Player.Quit.performed += OnExitGame;
         SceneManager.SceneLoaded += OnSceneLoaded;
         SceneManager.TurnPlayer += OnTurnPlayer;
         UIManager.MovementLimitation += OnLimitMovement;
@@ -39,8 +40,10 @@ public class PlayerScript : MonoBehaviour
     private void OnDisable()
     {
         input.Player.Action.performed -= OnActionPerformed;
+        input.Player.Quit.performed -= OnExitGame;
         SceneManager.SceneLoaded -= OnSceneLoaded;
         SceneManager.TurnPlayer -= OnTurnPlayer;
+        UIManager.MovementLimitation -= OnLimitMovement;
         input.Player.Disable();
     }
 
@@ -123,6 +126,11 @@ public class PlayerScript : MonoBehaviour
         }
         state = newState;
         state.OnEnter(this);
+    }
+
+    private void OnExitGame(InputAction.CallbackContext callback)
+    {
+        Application.Quit();
     }
 
     private void OnActionPerformed(InputAction.CallbackContext callback)
