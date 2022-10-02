@@ -28,6 +28,7 @@ public class PlayerScript : MonoBehaviour
     {
         input.Player.Action.performed += OnActionPerformed;
         SceneManager.SceneLoaded += OnSceneLoaded;
+        SceneManager.TurnPlayer += OnTurnPlayer;
         input.Player.Enable();
     }
 
@@ -35,6 +36,7 @@ public class PlayerScript : MonoBehaviour
     {
         input.Player.Action.performed -= OnActionPerformed;
         SceneManager.SceneLoaded -= OnSceneLoaded;
+        SceneManager.TurnPlayer -= OnTurnPlayer;
         input.Player.Disable();
     }
 
@@ -80,6 +82,29 @@ public class PlayerScript : MonoBehaviour
             gridSize = grid.cellSize.x;
         }
     }
+    
+    private void OnTurnPlayer(object sender, SceneManager.PlayerDirection direction)
+    {
+        SetAnimation("OnStop");
+        switch (direction.GetDirection())
+        {
+            case 0:
+                SetAnimation("OnTurnUp");
+                break;
+            case 1:
+                SetAnimation("OnTurnRight");
+                break;
+            case 2:
+                SetAnimation("OnTurnDown");
+                break;
+            case 3:
+                SetAnimation("OnTurnLeft");
+                break;
+            default:
+                Debug.LogWarning("Unknown direction!");
+                break;
+        }
+    }
 
     private void OnActionPerformed(InputAction.CallbackContext callback)
     {
@@ -91,7 +116,7 @@ public class PlayerScript : MonoBehaviour
                     OnReadSign(currentTrigger.name);
                     break;
                 case "Door":
-                    OnEnterDoor(currentTrigger.name);
+                    DoorEntered.Invoke(this, new Door(currentTrigger.name));
                     break;
                 default:
                     Debug.LogWarning("Unknown trigger!");
@@ -99,19 +124,7 @@ public class PlayerScript : MonoBehaviour
             }
         }
     }
-
-    private void OnEnterDoor(String door)
-    {
-        switch (door)
-        {
-            case "Door_Level1_Tavern":
-                DoorEntered.Invoke(this, new Door(door));
-                break;
-            default:
-                Debug.LogWarning("Unknown door!");
-                break;
-        }
-    }
+    
     private void OnReadSign(String sign)
     {
         switch (sign)
