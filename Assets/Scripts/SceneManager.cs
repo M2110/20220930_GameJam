@@ -13,6 +13,7 @@ public class SceneManager : MonoBehaviour
     private float lightIntensity;
 
     public static event EventHandler SceneLoaded;
+    public static event EventHandler<PlayerDirection> TurnPlayer; 
 
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject[] enemies;
@@ -41,10 +42,12 @@ public class SceneManager : MonoBehaviour
     void Start()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Level1_Outside");
+        player = GameObject.Find("Player");
     }
 
     void OnDoorTrigger(object sender, PlayerScript.Door door)
     {
+        player ??= (GameObject)sender;
         StartCoroutine(LoadNewScene(door.GetDoorName()));
     }
 
@@ -55,11 +58,22 @@ public class SceneManager : MonoBehaviour
         {
             case "Door_Level1_Tavern":
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Level1_Inside1");
-                while (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level1_Inside_1")
+                while (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level1_Inside1")
                 {
                     yield return null;
                 }
+                TurnPlayer.Invoke(this, new PlayerDirection(0));
                 player.transform.position = new Vector2(-5f, -2f);
+                hasLoadedScene = true;
+                break;
+            case "Door_Level1_Outside_Tavern":
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Level1_Outside");
+                while (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level1_Outside")
+                {
+                    yield return null;
+                }
+                TurnPlayer.Invoke(this, new PlayerDirection(2));
+                player.transform.position = new Vector2(36f, 4f);
                 hasLoadedScene = true;
                 break;
             default:
@@ -69,6 +83,21 @@ public class SceneManager : MonoBehaviour
         if (hasLoadedScene)
         {
             SceneLoaded.Invoke(this, EventArgs.Empty);
+        }
+    }
+
+    public class PlayerDirection : EventArgs
+    {
+        private int direction;
+
+        public PlayerDirection(int direction)
+        {
+            this.direction = direction;
+        }
+
+        public int GetDirection()
+        {
+            return direction;
         }
     }
 }

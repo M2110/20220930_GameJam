@@ -91,7 +91,7 @@ public class PlayerScript : MonoBehaviour
                     OnReadSign(currentTrigger.name);
                     break;
                 case "Door":
-                    OnEnterDoor(currentTrigger.name);
+                    DoorEntered.Invoke(this, new Door(currentTrigger.name));
                     break;
                 default:
                     Debug.LogWarning("Unknown trigger!");
@@ -99,19 +99,7 @@ public class PlayerScript : MonoBehaviour
             }
         }
     }
-
-    private void OnEnterDoor(String door)
-    {
-        switch (door)
-        {
-            case "Door_Level1_Tavern":
-                DoorEntered.Invoke(this, new Door(door));
-                break;
-            default:
-                Debug.LogWarning("Unknown door!");
-                break;
-        }
-    }
+    
     private void OnReadSign(String sign)
     {
         switch (sign)
