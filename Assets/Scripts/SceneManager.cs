@@ -83,7 +83,17 @@ public class SceneManager : MonoBehaviour
                     yield return null;
                 }
                 TurnPlayer.Invoke(this, new PlayerDirection(0));
-                player.transform.position = new Vector2(0f, -6f);
+                player.transform.position = new Vector2(0f, -2f);
+                hasLoadedScene = true;
+                break;
+            case "Door_Level1_Outside_Church":
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Level1_Outside");
+                while (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level1_Outside")
+                {
+                    yield return null;
+                }
+                TurnPlayer.Invoke(this, new PlayerDirection(2));
+                player.transform.position = new Vector2(-11f, 23f);
                 hasLoadedScene = true;
                 break;
             default:
