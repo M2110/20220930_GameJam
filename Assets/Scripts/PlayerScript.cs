@@ -14,13 +14,12 @@ public class PlayerScript : MonoBehaviour
     private Animator[] animators;
     private bool isMovementLimited;
 
-    private ILevel1Interface state;
+    private IStateInterface state;
 
     [SerializeField] private float speed = 5f;
     
     public static event EventHandler<Door> DoorEntered;
     public static event EventHandler<UIText> DisplayUIText;
-    //public static event EventHandler<UIObjectInventory> DisplayObjectInventory;
 
     private void Awake()
     {
@@ -116,7 +115,7 @@ public class PlayerScript : MonoBehaviour
         isMovementLimited = movement.GetMovementLimitation();
     }
 
-    public void ChangeState(ILevel1Interface newState)
+    public void ChangeState(IStateInterface newState)
     {
         if (state is not null)
         {
@@ -141,11 +140,9 @@ public class PlayerScript : MonoBehaviour
                 case "Door":
                     state.OnDoorEntered(currentTrigger.name);
                     break;
-                
-                /*case "Chest":
-                    DisplayObjectInventory.Invoke(this, new UIObjectInventory("test name",currentTrigger.GetComponentInChildren<Sprite>()));
-                    break;    
-                */
+                case "Storage":
+                    state.OnLookIntoStorage(currentTrigger.name);
+                    break;
                 default:
                     Debug.LogWarning("Unknown trigger!");
                     break;
@@ -160,10 +157,21 @@ public class PlayerScript : MonoBehaviour
             case "Sign_Level1_Tavern":
                 DisplayMessage("To the tavern.", 3);
                 break;
+            case "Sign_Level1_Village":
+                DisplayMessage("To the village.", 3);
+                break;
+            case "Sign_Level1_Church":
+                DisplayMessage("To the church.", 3);
+                break;
             default:
                 Debug.LogWarning("Unknown sign!");
                 break;
         }
+    }
+
+    public void OnLevelChangeRejected()
+    {
+        // TODO: implement moving back after trying to access next level.
     }
 
     public void DisplayMessage(string text, int duration, bool isMovementLimited = false)
@@ -306,23 +314,4 @@ public class PlayerScript : MonoBehaviour
             return isMovementLimited;
         }
     }
-
-    /*public class UIObjectInventory : EventArgs
-    {
-        private string name;
-        private Sprite sprite;
-        public UIObjectInventory(string name, Sprite sprite)
-        {
-            this.name = name;
-            this.sprite = sprite;
-        }
-        
-        public string GetName(){return name;}
-
-        public Sprite GetSprite()
-        {
-            return sprite;
-        }
-    }*/
-
 }

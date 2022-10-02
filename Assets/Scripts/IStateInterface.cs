@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface ILevel1Interface
+public interface IStateInterface
 {
     void OnEnter(PlayerScript playerScript);
     void OnExit();
