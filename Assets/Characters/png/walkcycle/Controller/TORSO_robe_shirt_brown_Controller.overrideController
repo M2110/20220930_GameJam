@@ -7,5 +7,21 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TORSO_robe_shirt_brown_Controller
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: cf0fd53d5df9f9848bfe382afa463733, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 8af9528696b758a40bf25bd3d3268010, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7e2d2aae0d416e449911909073782fef, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1b20b52c857d29a439f263b629903d71, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a0dbc0450bcb4664c98de776cf3db8d9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a1d0250b34701d6449e59de7b966bb8b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2f16dac678415224d858abeff994cd89, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8e8be9dceafd78a40a3f4220a18ee545, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 217ed6b6154c8fc4ba04aa913fcf3736, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fffa74ba20d8789469625eba3ebfc51a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8a77f88d3a72314439f6ac25a8cf129f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bbd1dce86c0655546906cb4526222f9f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4b6c29abd7634ae4a9417b54f6eeaae2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 65e6ea4b2ad51064eb8b85ceda721436, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f6dc271b19776324fbbfeee625a32b40, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 84535ef3c36618c42aefe02fd84ae15e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 86eb6f20fe44eed45b094b9f5ca01311, type: 2}
