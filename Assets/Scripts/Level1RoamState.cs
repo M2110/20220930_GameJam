@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Level1GoToChurchState : IStateInterface
+public class Level1RoamState : IStateInterface
 {
     private PlayerScript playerScript;
     public void OnEnter(PlayerScript player)
@@ -19,18 +19,13 @@ public class Level1GoToChurchState : IStateInterface
         switch (name)
         {
             case "NPC_Level1_Tavern":
-                playerScript.DisplayMessage("Good job on finding that key.", 3, true);
-                playerScript.DisplayMessage("Now please go to the church and hand the letter over to the priest.", 4, true);
+                playerScript.DisplayMessage("Thank you. Feel free to look around.", 3, true);
                 break;
             case "NPC_Level1_Market":
-                playerScript.DisplayMessage("Now that you have the key, you can enter the church.", 3, true);
-                playerScript.DisplayMessage("You can find the church in the north.", 3, true);
+                playerScript.DisplayMessage("I recommend to explore the area now.", 3, true);
                 break;
             case "NPC_Level1_Church":
-                playerScript.DisplayMessage("Thank you my son.", 3, true);
-                playerScript.DisplayMessage("He needs my help. Would you please return to the tavern and hand this over?", 4, true);
-                playerScript.DisplayMessage("You received a glass cylinder with a red liquid in it.", 4);
-                playerScript.ChangeState(new Level1GoBackToTavernState());
+                playerScript.DisplayMessage("Thanks for your help, sadly I have no time to lead you around the town.", 4, true);
                 break;
             default:
                 Debug.LogWarning("Unknown npc!");
@@ -76,6 +71,6 @@ public class Level1GoToChurchState : IStateInterface
 
     public void OnLookIntoStorage(string name)
     {
-        
+        playerScript.DisplayMessage("You didn't find anything interresting.", 3);
     }
 }
