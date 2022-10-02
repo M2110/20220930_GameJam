@@ -24,8 +24,8 @@ public class Level1GoToLockedChurchState : IStateInterface
                 break;
             case "NPC_Level1_Market":
                 playerScript.DisplayMessage("Hello, you again.", 2, true);
-                playerScript.DisplayMessage("Did you talk to the bartender?.", 3, true);
-                playerScript.DisplayMessage("Ah to the church he said?.", 3, true);
+                playerScript.DisplayMessage("Did you talk to the bartender?", 3, true);
+                playerScript.DisplayMessage("Ah to the church he said?", 3, true);
                 playerScript.DisplayMessage("You can find the church in the north.", 3, true);
                 break;
             default:

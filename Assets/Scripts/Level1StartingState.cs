@@ -30,7 +30,7 @@ public class Level1StartingState : IStateInterface
                 break;
             case "NPC_Level1_Market":
                 playerScript.DisplayMessage("Hello there.", 2, true);
-                playerScript.DisplayMessage("Are you new to this city?.", 3, true);
+                playerScript.DisplayMessage("Are you new to this city?", 3, true);
                 playerScript.DisplayMessage("If you want to find out more about our small town you should visit the tavern.", 4, true);
                 playerScript.DisplayMessage("Where to find the tavern? It is located east from the marketplace.", 4, true);
                 break;

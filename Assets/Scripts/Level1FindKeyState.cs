@@ -19,10 +19,10 @@ public class Level1FindKeyState : IStateInterface
         switch (name)
         {
             case "NPC_Level1_Tavern":
-                playerScript.DisplayMessage("Maybe you can find the key somewhere on the marketplace.", 3, true);
+                playerScript.DisplayMessage("Maybe you can find the key somewhere on the marketplace.", 4, true);
                 break;
             case "NPC_Level1_Market":
-                playerScript.DisplayMessage("The door to the church is locked?.", 2, true); 
+                playerScript.DisplayMessage("The door to the church is locked?", 2, true); 
                 playerScript.DisplayMessage("I think I saw the priest in the morning at those chests over there, maybe you are lucky.", 4, true); 
                     break;
             default:
@@ -66,6 +66,15 @@ public class Level1FindKeyState : IStateInterface
 
     public void OnLookIntoStorage(string name)
     {
-        
+        switch (name)
+        {
+            case "Storage_Level1_Chest3":
+                playerScript.DisplayMessage("You found a key.", 2, true);
+                playerScript.ChangeState(new Level1GoToChurchState());
+                break;
+            default:
+                playerScript.DisplayMessage("There is no key here.", 2);
+                break;
+        }
     }
 }

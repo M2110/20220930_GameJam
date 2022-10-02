@@ -20,11 +20,11 @@ public class Level1ChurchLocked2State : IStateInterface
         {
             case "NPC_Level1_Tavern":
                 playerScript.DisplayMessage("The church is locked you say?", 2, true);
-                playerScript.DisplayMessage("Maybe you can find the key somewhere on the marketplace.", 2, true);
+                playerScript.DisplayMessage("Maybe you can find the key somewhere on the marketplace.", 3, true);
                 playerScript.ChangeState(new Level1FindKeyState());
                 break;
             case "NPC_Level1_Market":
-                playerScript.DisplayMessage("The church is locked?.", 2, true);
+                playerScript.DisplayMessage("The church is locked?", 2, true);
                 playerScript.DisplayMessage("Maybe the bartender can help you.", 3, true);
                 break;
             default:

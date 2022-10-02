@@ -72,15 +72,6 @@ public class Level1GoToChurchState : IStateInterface
 
     public void OnLookIntoStorage(string name)
     {
-        switch (name)
-        {
-            case "Storage_Level1_Chest3":
-                playerScript.DisplayMessage("You found a key.", 2, true);
-                playerScript.ChangeState(new Level1GoToChurchState());
-                break;
-            default:
-                playerScript.DisplayMessage("There is no key here.", 2);
-                break;
-        }
+        
     }
 }
