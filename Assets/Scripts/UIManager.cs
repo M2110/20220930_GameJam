@@ -10,9 +10,11 @@ public class UIManager : MonoBehaviour
     private Canvas ui;
     private TextMeshProUGUI text;
     private Image panel;
-    private Queue<string[]> queue = new Queue<string[]>();
+    private Queue<object[]> queue = new Queue<object[]>();
     private bool isDisplayingText;
-    
+
+    public static event EventHandler<Move> MovementLimitation;
+
     [SerializeField] private int fadeDuration = 10;
 
     void Start()
@@ -37,22 +39,28 @@ public class UIManager : MonoBehaviour
     {
         string displayText = uiText.GetDisplayText();
         int duration = uiText.GetDuration();
+        bool limitMovement = uiText.GetMovementLimitation();
         
         if (isDisplayingText)
         {
-            string[] toQueue = new string[2];
+            object[] toQueue = new object[3];
             toQueue[0] = displayText;
-            toQueue[1] = duration.ToString();
+            toQueue[1] = duration;
+            toQueue[2] = limitMovement;
             queue.Enqueue(toQueue);
         }
         else
         {
-            StartCoroutine(FadeInUI(displayText, duration));
+            StartCoroutine(FadeInUI(displayText, duration, limitMovement));
         }
     }
 
-    private IEnumerator FadeInUI(string displayText, int duration, bool onlyFadeText = false)
+    private IEnumerator FadeInUI(string displayText, int duration, bool isMovementLimited, bool onlyFadeText = false)
     {
+        if (isMovementLimited)
+        {
+            MovementLimitation.Invoke(this, new Move(true));
+        }
         text.text = displayText;
         isDisplayingText = true;
         if (!onlyFadeText)
@@ -91,6 +99,7 @@ public class UIManager : MonoBehaviour
         if (!onlyFadeText)
         {
             isDisplayingText = false;
+            MovementLimitation.Invoke(this, new Move(false));
         }
     }
 
@@ -113,8 +122,23 @@ public class UIManager : MonoBehaviour
         {
             StartCoroutine(FadeOutUI(true));
             yield return new WaitForSeconds(fadeDuration / 60f);
-            string[] fromQueue = queue.Dequeue();
-            StartCoroutine(FadeInUI(fromQueue[0], Int32.Parse(fromQueue[1]), true));
+            object[] fromQueue = queue.Dequeue();
+            StartCoroutine(FadeInUI((string) fromQueue[0], (int) fromQueue[1], (bool) fromQueue[2], true));
+        }
+    }
+
+    public class Move
+    {
+        private bool isMomvementLimited;
+
+        public Move(bool isMomvementLimited)
+        {
+            this.isMomvementLimited = isMomvementLimited;
+        }
+        
+        public bool GetMovementLimitation()
+        {
+            return isMomvementLimited;
         }
     }
 }

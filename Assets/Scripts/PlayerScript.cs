@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     private float gridSize = 1;
     private GameObject currentTrigger;
     private Animator[] animators;
+    private bool isMovementLimited;
 
     [SerializeField] private float speed = 5f;
     
@@ -29,6 +30,7 @@ public class PlayerScript : MonoBehaviour
         input.Player.Action.performed += OnActionPerformed;
         SceneManager.SceneLoaded += OnSceneLoaded;
         SceneManager.TurnPlayer += OnTurnPlayer;
+        UIManager.MovementLimitation += OnLimitMovement;
         input.Player.Enable();
     }
 
@@ -48,7 +50,7 @@ public class PlayerScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isMoving && input.Player.Move.ReadValue<Vector2>() != Vector2.zero)
+        if (!isMoving && input.Player.Move.ReadValue<Vector2>() != Vector2.zero && !isMovementLimited)
         {
             isMoving = true;
             StartCoroutine(Movement(input.Player.Move.ReadValue<Vector2>()));
@@ -105,6 +107,11 @@ public class PlayerScript : MonoBehaviour
                 break;
         }
     }
+    
+    private void OnLimitMovement(object sender, UIManager.Move movement)
+    {
+        isMovementLimited = movement.GetMovementLimitation();
+    }
 
     private void OnActionPerformed(InputAction.CallbackContext callback)
     {
@@ -114,6 +121,9 @@ public class PlayerScript : MonoBehaviour
             {
                 case "Sign":
                     OnReadSign(currentTrigger.name);
+                    break;
+                case "Npc":
+                    OnTalkToNPC(currentTrigger.name);
                     break;
                 case "Door":
                     DoorEntered.Invoke(this, new Door(currentTrigger.name));
@@ -125,6 +135,18 @@ public class PlayerScript : MonoBehaviour
         }
     }
     
+    private void OnTalkToNPC(String npc)
+    {
+        switch (npc)
+        {
+            case "NPC_Level1_Tavern":
+                DisplayUIText.Invoke(this, new UIText("Welcome to the tavern.", 5, true));
+                break;
+            default:
+                Debug.LogWarning("Unknown npc!");
+                break;
+        }
+    }
     private void OnReadSign(String sign)
     {
         switch (sign)
@@ -224,11 +246,13 @@ public class PlayerScript : MonoBehaviour
     {
         private string displayText;
         private int duration;
+        private bool isMovementLimited;
 
-        public UIText(string displayText, int duration)
+        public UIText(string displayText, int duration, bool isMovementLimited = false)
         {
             this.displayText = displayText;
             this.duration = duration;
+            this.isMovementLimited = isMovementLimited;
         }
         public string GetDisplayText()
         {
@@ -238,6 +262,11 @@ public class PlayerScript : MonoBehaviour
         public int GetDuration()
         {
             return duration;
+        }
+
+        public bool GetMovementLimitation()
+        {
+            return isMovementLimited;
         }
     }
 }

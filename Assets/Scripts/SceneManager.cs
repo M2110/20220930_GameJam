@@ -76,6 +76,16 @@ public class SceneManager : MonoBehaviour
                 player.transform.position = new Vector2(36f, 4f);
                 hasLoadedScene = true;
                 break;
+            case "Door_Level1_Church":
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Level1_Inside2");
+                while (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level1_Inside2")
+                {
+                    yield return null;
+                }
+                TurnPlayer.Invoke(this, new PlayerDirection(0));
+                player.transform.position = new Vector2(0f, -6f);
+                hasLoadedScene = true;
+                break;
             default:
                 Debug.LogWarning($"No door with name {door} found.");
                 break;
