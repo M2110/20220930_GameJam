@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,10 @@ public class UIManager : MonoBehaviour
     private Queue<object[]> queue = new Queue<object[]>();
     private bool isDisplayingText;
 
+    private GameObject uIObjectInventoryEmpty;
+    private TextMeshProUGUI textObjectInventory;
+    private Image imageSlotObjectInventory;
+
     public static event EventHandler<Move> MovementLimitation;
 
     [SerializeField] private int fadeDuration = 10;
@@ -23,16 +28,24 @@ public class UIManager : MonoBehaviour
         ui = FindObjectOfType<Canvas>();
         text = ui.GetComponentInChildren<TextMeshProUGUI>();
         panel = ui.GetComponentInChildren<Image>();
+        
+        uIObjectInventoryEmpty = GameObject.Find("UIObjectInventory");
+        textObjectInventory = uIObjectInventoryEmpty.GetComponentInChildren<TextMeshProUGUI>();
+        imageSlotObjectInventory = uIObjectInventoryEmpty.GetComponentInChildren<Image>(); 
+        
+
     }
 
     private void OnEnable()
     {
         PlayerScript.DisplayUIText += DisplayText;
+        PlayerScript.DisplayObjectInventory += DisplayObjectInventory;
     }
 
     private void OnDisable()
     {
         PlayerScript.DisplayUIText -= DisplayText;
+        PlayerScript.DisplayObjectInventory -= DisplayObjectInventory;
     }
 
     private void DisplayText(object sender, PlayerScript.UIText uiText)
@@ -142,8 +155,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void DisplayObjectInventory()
+    private void DisplayObjectInventory(object sender, PlayerScript.UIObjectInventory inventory)
     {
-        
+        textObjectInventory.color = new Color(textObjectInventory.color.r, textObjectInventory.color.g, textObjectInventory.color.b,255);
+        imageSlotObjectInventory.color = new Color(imageSlotObjectInventory.color.r, imageSlotObjectInventory.color.g,
+            imageSlotObjectInventory.color.b, 255);
+        imageSlotObjectInventory.sprite = inventory.GetSprite();
     }
 }

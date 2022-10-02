@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour
     
     public static event EventHandler<Door> DoorEntered;
     public static event EventHandler<UIText> DisplayUIText;
+    public static event EventHandler<UIObjectInventory> DisplayObjectInventory;
 
     private void Awake()
     {
@@ -128,6 +129,11 @@ public class PlayerScript : MonoBehaviour
                 case "Door":
                     DoorEntered.Invoke(this, new Door(currentTrigger.name));
                     break;
+                
+                case "Chest":
+                    DisplayObjectInventory.Invoke(this, new UIObjectInventory("test name",currentTrigger.GetComponentInChildren<Sprite>()));
+                    break;    
+                
                 default:
                     Debug.LogWarning("Unknown trigger!");
                     break;
@@ -269,4 +275,23 @@ public class PlayerScript : MonoBehaviour
             return isMovementLimited;
         }
     }
+
+    public class UIObjectInventory : EventArgs
+    {
+        private string name;
+        private Sprite sprite;
+        public UIObjectInventory(string name, Sprite sprite)
+        {
+            this.name = name;
+            this.sprite = sprite;
+        }
+        
+        public string GetName(){return name;}
+
+        public Sprite GetSprite()
+        {
+            return sprite;
+        }
+    }
+
 }
