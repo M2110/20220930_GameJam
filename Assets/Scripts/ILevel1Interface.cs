@@ -7,4 +7,5 @@ public interface ILevel1Interface
     void OnTalkToNPC(string name);
     void OnDoorEntered(string name);
     void OnLevelChange(string name);
+    void OnLookIntoStorage(string name);
 }

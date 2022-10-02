@@ -50,4 +50,9 @@ public class Level1StartingState : ILevel1Interface
     {
         throw new NotImplementedException();
     }
+
+    public void OnLookIntoStorage(string name)
+    {
+        
+    }
 }

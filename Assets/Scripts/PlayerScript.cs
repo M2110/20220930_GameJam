@@ -140,7 +140,6 @@ public class PlayerScript : MonoBehaviour
                     break;
                 case "Door":
                     state.OnDoorEntered(currentTrigger.name);
-                    //DoorEntered.Invoke(this, new Door(currentTrigger.name));
                     break;
                 
                 case "Chest":
