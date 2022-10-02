@@ -470,8 +470,8 @@ TextureImporter:
       name: ExtraProps_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 384
+        x: 128
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -491,8 +491,8 @@ TextureImporter:
       name: ExtraProps_17
       rect:
         serializedVersion: 2
-        x: 32
-        y: 384
+        x: 160
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -512,7 +512,7 @@ TextureImporter:
       name: ExtraProps_18
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 384
         width: 32
         height: 32
@@ -533,7 +533,7 @@ TextureImporter:
       name: ExtraProps_19
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 384
         width: 32
         height: 32
@@ -554,8 +554,8 @@ TextureImporter:
       name: ExtraProps_20
       rect:
         serializedVersion: 2
-        x: 0
-        y: 352
+        x: 64
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -575,8 +575,8 @@ TextureImporter:
       name: ExtraProps_21
       rect:
         serializedVersion: 2
-        x: 32
-        y: 352
+        x: 96
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -596,8 +596,8 @@ TextureImporter:
       name: ExtraProps_22
       rect:
         serializedVersion: 2
-        x: 64
-        y: 352
+        x: 128
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -617,8 +617,8 @@ TextureImporter:
       name: ExtraProps_23
       rect:
         serializedVersion: 2
-        x: 96
-        y: 352
+        x: 160
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -639,7 +639,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 320
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -660,7 +660,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 320
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -681,7 +681,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 320
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -702,7 +702,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 320
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -714,6 +714,90 @@ TextureImporter:
       bones: []
       spriteID: 91ac797b8ba70b945bfb6a23c94e14b4
       internalID: -1427353632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtraProps_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6706631ed98928a4a815939c05a14b4a
+      internalID: 1157922937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtraProps_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85f2a3603b2b604182d414d377fc164
+      internalID: -1214761593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtraProps_30
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21acd148d9ebff0479c3a37ad41ced72
+      internalID: -553872607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtraProps_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83070e0d00312684abc3b85c0ae96285
+      internalID: 291042298
       vertices: []
       indices: 
       edges: []
@@ -741,12 +825,16 @@ TextureImporter:
       ExtraProps_7: -1500758021
       ExtraProps_20: 1556876525
       ExtraProps_9: 1074399878
+      ExtraProps_31: 291042298
       ExtraProps_1: 1738526134
       ExtraProps_3: 779651005
       ExtraProps_16: -936026797
+      ExtraProps_30: -553872607
       ExtraProps_14: -1298422546
       ExtraProps_2: 856162024
       ExtraProps_10: 322918898
+      ExtraProps_29: -1214761593
+      ExtraProps_28: 1157922937
       ExtraProps_18: 10981892
       ExtraProps_22: 148882353
       ExtraProps_15: 1420226528
