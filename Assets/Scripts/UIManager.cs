@@ -117,4 +117,9 @@ public class UIManager : MonoBehaviour
             StartCoroutine(FadeInUI(fromQueue[0], Int32.Parse(fromQueue[1]), true));
         }
     }
+
+    private void DisplayObjectInventory()
+    {
+        
+    }
 }
