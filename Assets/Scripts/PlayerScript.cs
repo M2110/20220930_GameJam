@@ -28,6 +28,7 @@ public class PlayerScript : MonoBehaviour
     {
         input.Player.Action.performed += OnActionPerformed;
         SceneManager.SceneLoaded += OnSceneLoaded;
+        SceneManager.TurnPlayer += OnTurnPlayer;
         input.Player.Enable();
     }
 
@@ -35,6 +36,7 @@ public class PlayerScript : MonoBehaviour
     {
         input.Player.Action.performed -= OnActionPerformed;
         SceneManager.SceneLoaded -= OnSceneLoaded;
+        SceneManager.TurnPlayer -= OnTurnPlayer;
         input.Player.Disable();
     }
 
@@ -78,6 +80,29 @@ public class PlayerScript : MonoBehaviour
         if (grid is not null)
         {
             gridSize = grid.cellSize.x;
+        }
+    }
+    
+    private void OnTurnPlayer(object sender, SceneManager.PlayerDirection direction)
+    {
+        SetAnimation("OnStop");
+        switch (direction.GetDirection())
+        {
+            case 0:
+                SetAnimation("OnTurnUp");
+                break;
+            case 1:
+                SetAnimation("OnTurnRight");
+                break;
+            case 2:
+                SetAnimation("OnTurnDown");
+                break;
+            case 3:
+                SetAnimation("OnTurnLeft");
+                break;
+            default:
+                Debug.LogWarning("Unknown direction!");
+                break;
         }
     }
 
