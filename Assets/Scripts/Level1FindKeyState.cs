@@ -53,6 +53,24 @@ public class Level1FindKeyState : IStateInterface
             case "Door_Level1_House3":
                 playerScript.DisplayMessage("There is nobody at home.", 1);
                 break;
+            case "Door_Level1_House4":
+                playerScript.DisplayMessage("There is nobody at home.", 1);
+                break;
+            case "Door_Level1_House5":
+                playerScript.DisplayMessage("There is nobody at home.", 1);
+                break;
+            case "Door_Level1_House6":
+                playerScript.DisplayMessage("There is nobody at home.", 1);
+                break;
+            case "Door_Level1_House7":
+                playerScript.DisplayMessage("There is nobody at home.", 1);
+                break;
+            case "Door_Level1_House8":
+                playerScript.DisplayMessage("There is nobody at home.", 1);
+                break;
+            case "Door_Level1_House9":
+                playerScript.DisplayMessage("There is nobody at home.", 1);
+                break;
             default:
                 Debug.LogWarning("Unknown door!");
                 break;

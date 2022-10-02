@@ -222,7 +222,15 @@ public class PlayerScript : MonoBehaviour
             {
                 break;
             }
-            rb.velocity = direction * speed;
+            if (input.Player.Sprint.IsPressed())
+            {
+                rb.velocity =  speed * 2 * direction;
+            }
+            else
+            {
+                rb.velocity = direction * speed;
+            }
+            
             lastDistance = distance;
             yield return new WaitForSeconds(1f / 60);
         }
