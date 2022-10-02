@@ -54,7 +54,7 @@ public class SceneManager : MonoBehaviour
         switch (door)
         {
             case "Door_Level1_Tavern":
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Level1_Inside_1");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Level1_Inside1");
                 while (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level1_Inside_1")
                 {
                     yield return null;
